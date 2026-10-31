@@ -34,11 +34,48 @@ python -c "import sys, numpy as np; print(sys.executable); a = np.array([1, 2, 3
 ## Verification output
 
 ```text
-/home/student/The-AI-Forge/.venv/bin/python
+/home/student/ai/The-AI-Forge/.venv/bin/python
 14
 ```
 
 The Python path confirms the virtual environment was active. The dot product is `1×1 + 2×2 + 3×3 = 14`.
+
+## Course verifier
+
+Ran from the root of the full course checkout:
+
+```bash
+python3 phases/00-setup-and-tooling/01-dev-environment/code/verify.py --route beginner
+```
+
+Result: **2/2 required checks passed** — Python 3.12.3 at `/usr/bin/python3` and Git 2.43.0 at `/usr/bin/git`. The verifier skipped later tools because they are not required to start the beginner route.
+
+## PyTorch
+
+Installed the CPU build with:
+
+```bash
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+
+Verified it with the project's interpreter:
+
+```bash
+/home/student/ai/The-AI-Forge/.venv/bin/python -c "import torch; print(torch.__version__); print('CUDA available:', torch.cuda.is_available())"
+```
+
+Output:
+
+```text
+2.15.0+cpu
+CUDA available: False
+```
+
+`CUDA available: False` is expected because this is the CPU-only build.
+
+## Lesson quiz
+
+Score: **2/3**. Review how `uv` installs and resolves Python packages.
 
 ## Re-create after a reset
 
@@ -55,9 +92,17 @@ The `.venv/` directory is already excluded by the repository's `.gitignore`; rec
 
 ## Not done yet
 
-- The course's official verifier was not run; its script is not in this learning repository.
-- Install PyTorch and complete the lesson's language examples.
-- Complete the lesson quiz.
+- Write and run the lesson's Hello World examples. Python is done; the TypeScript, Rust, and Julia examples remain.
+
+  Python example: `codes/hello.py`. Rerun it from the repository root with:
+
+  ```bash
+  .venv/bin/python phases/00-setup-and-tooling/01-dev-environment/codes/hello.py
+  ```
+
+  It prints `hello world`. The captured output is in `outputs/hello.txt`.
+
+- Revisit `uv` package management, the topic missed in the quiz.
 
 ## Questions to revisit
 
