@@ -12,9 +12,12 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
+Current progress: [Dev Environment](phases/00-setup-and-tooling/01-dev-environment/notes.md) quiz complete (2/3); Python environment, verifier, CPU PyTorch, and Python Hello World are done. TypeScript, Rust, and Julia Hello World examples remain. Review topic: `uv` package management. See [my_journal.md](my_journal.md) for tutor setup instructions and plain-language notes.
+
 ## Repository contents
 
 - `LEARNING.md` — My learning plan and course progress.
+- `my_journal.md` — Tutor setup and plain-language notes from my lessons.
 - `notes/` — Explanations written in my own words.
 - `implementations/` — My lesson implementations.
 - `tests/` — Tests for my code.
