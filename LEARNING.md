@@ -38,6 +38,7 @@ Become competent in AI engineering and build my personal model.
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
+| 2026-10-31 | 00-setup-and-tooling/01-dev-environment | 2/3 | Python environment, NumPy check, verifier, CPU PyTorch import, and Python Hello World are complete; TypeScript, Rust, and Julia Hello World examples remain. Review `uv` package management. |
 
 ## Review queue
-<empty for now; learn adds lessons the quizzes flag>
+- `00-setup-and-tooling/01-dev-environment` — Review the purpose of `uv` as a Python package installer and resolver.
