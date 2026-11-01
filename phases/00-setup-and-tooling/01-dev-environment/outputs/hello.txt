@@ -1,1 +1,1 @@
-hello world
+all codes for python, rust, typescript, and julia output: hello world
