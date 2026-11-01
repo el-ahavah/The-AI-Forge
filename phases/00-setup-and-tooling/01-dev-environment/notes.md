@@ -90,19 +90,23 @@ uv pip install numpy matplotlib jupyter
 
 The `.venv/` directory is already excluded by the repository's `.gitignore`; recreate it locally instead of pushing it.
 
-## Not done yet
+## Exercise files and rerun commands
 
-- Write and run the lesson's Hello World examples. Python is done; the TypeScript, Rust, and Julia examples remain.
+All four Hello World files are in `codes/`; `outputs/hello.txt` records `hello world` for each. From the repository root, rerun them with:
 
-  Python example: `codes/hello.py`. Rerun it from the repository root with:
+```bash
+.venv/bin/python phases/00-setup-and-tooling/01-dev-environment/codes/hello.py
+npx tsx phases/00-setup-and-tooling/01-dev-environment/codes/hello.ts
+rustc phases/00-setup-and-tooling/01-dev-environment/codes/hello.rs -o /tmp/hello-rust && /tmp/hello-rust
+julia phases/00-setup-and-tooling/01-dev-environment/codes/hello.jl
+```
 
-  ```bash
-  .venv/bin/python phases/00-setup-and-tooling/01-dev-environment/codes/hello.py
-  ```
+Node.js does not run `.ts` files directly, so the TypeScript example uses `tsx`.
 
-  It prints `hello world`. The captured output is in `outputs/hello.txt`.
+## Follow-up
 
-- Revisit `uv` package management, the topic missed in the quiz.
+- Review `uv` package management, the topic missed in the quiz.
+- GPU setup is optional; the CPU PyTorch build works for lessons that do not require GPU acceleration.
 
 ## Questions to revisit
 

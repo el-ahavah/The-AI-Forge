@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: [Dev Environment](phases/00-setup-and-tooling/01-dev-environment/notes.md) quiz complete (2/3); Python environment, verifier, CPU PyTorch, and Python Hello World are done. TypeScript, Rust, and Julia Hello World examples remain. Review topic: `uv` package management. See [my_journal.md](my_journal.md) for tutor setup instructions and plain-language notes.
+Current progress: [Dev Environment](phases/00-setup-and-tooling/01-dev-environment/notes.md) setup exercises and four Hello World examples are complete; quiz score: 2/3. Review topic: `uv` package management. See [my_journal.md](my_journal.md) for tutor setup instructions and plain-language notes.
 
 ## Repository contents
 

@@ -111,25 +111,30 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. I am working through its first lesson, **Dev Environment**: the verifier passed, PyTorch works, and the quiz is complete. Python Hello World is done; TypeScript, Rust, and Julia examples remain. Phase 1, **Math Foundations**, is marked `Do` in my plan and comes after the remaining Phase 0 lessons. This journal begins with my course setup and will continue as I reach Phase 1 and later phases.
+My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and Hello World examples in Python, TypeScript, Rust, and Julia for **Dev Environment** are complete. The quiz score was 2/3, so `uv` remains in the review queue. Phase 1, **Math Foundations**, is marked `Do` in my plan and comes after the remaining Phase 0 lessons. This journal begins with my course setup and will continue as I reach Phase 1 and later phases.
 
 ## Learning record
 
 ### Phase 0 · Lesson 1: Dev Environment
 
-**Date:** 2026-10-31  
+**Started:** 2026-10-31
+
+**Completed:** 2026-11-01
 **Quiz:** 2/3  
 **Review next time:** What `uv` does.
 
-**Exercise status:** The Python virtual environment, NumPy dot-product check, course verifier, and CPU PyTorch import are complete. Python Hello World is saved at `phases/00-setup-and-tooling/01-dev-environment/codes/hello.py`; it prints `hello world`, captured in `phases/00-setup-and-tooling/01-dev-environment/outputs/hello.txt`. TypeScript, Rust, and Julia Hello World examples remain.
+**Exercise status:** The Python virtual environment, NumPy dot-product check, course verifier, CPU PyTorch import, and Hello World examples in all four lesson languages are complete. The example files are under `phases/00-setup-and-tooling/01-dev-environment/codes/`; the output note is at `phases/00-setup-and-tooling/01-dev-environment/outputs/hello.txt` and records `hello world` for all four.
 
-To rerun the Python example from the repository root:
+To rerun all four examples from the repository root:
 
 ```bash
 .venv/bin/python phases/00-setup-and-tooling/01-dev-environment/codes/hello.py
+npx tsx phases/00-setup-and-tooling/01-dev-environment/codes/hello.ts
+rustc phases/00-setup-and-tooling/01-dev-environment/codes/hello.rs -o /tmp/hello-rust && /tmp/hello-rust
+julia phases/00-setup-and-tooling/01-dev-environment/codes/hello.jl
 ```
 
-It prints `Hello, AI Engineering!`.
+Each example prints `hello world`. TypeScript uses `tsx` because Node.js does not run `.ts` files directly.
 
 **PyTorch install and verification:** The CPU build installed and imported successfully. `CUDA available: False` is expected for this CPU-only build. The install command used was:
 
