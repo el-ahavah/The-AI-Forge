@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: Phase 0 Lesson 2, [Git & Collaboration](phases/00-setup-and-tooling/02-git-and-collaboration/notes.md), is complete (quiz 3/3; fork/branch, Git history, and `.gitignore` exercises done). Lesson 1 is complete; its `uv` review topic remains in the queue. Next: Phase 0 Lesson 3, GPU Setup & Cloud. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
+Current progress: Phase 0 Lessons 1 and 2 are complete. Lesson 1's `uv` review was cleared on 2026-11-02; Lesson 2 quiz score: 3/3. Next: Phase 0 Lesson 3, GPU Setup & Cloud. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
