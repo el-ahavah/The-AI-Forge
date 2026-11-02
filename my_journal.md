@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and Hello World examples in Python, TypeScript, Rust, and Julia for **Dev Environment** are complete. The quiz score was 2/3, so `uv` remains in the review queue. Phase 1, **Math Foundations**, is marked `Do` in my plan and comes after the remaining Phase 0 lessons. This journal begins with my course setup and will continue as I reach Phase 1 and later phases.
+My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and four Hello World examples for **Dev Environment** are complete; its 2/3 quiz score leaves `uv` in the review queue. **Git & Collaboration** is complete: quiz 3/3, course fork/branch push, Git history review, and checkpoint ignore check. Next is **GPU Setup & Cloud**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -135,6 +135,45 @@ julia phases/00-setup-and-tooling/01-dev-environment/codes/hello.jl
 ```
 
 Each example prints `hello world`. TypeScript uses `tsx` because Node.js does not run `.ts` files directly.
+
+### Phase 0 · Lesson 2: Git & Collaboration
+
+**Date:** 2026-11-02
+
+**Quiz:** 3/3
+
+**Review next time:** Nothing flagged by this quiz. The `uv` review from Lesson 1 is still open.
+
+Git moves selected changes from the working directory to the staging area with `git add`, saves a local snapshot with `git commit`, and sends committed changes to a remote with `git push`. A branch lets me make commits on an isolated line of work; merging applies those changes to another branch. `git log --oneline` gives a compact view of commit history.
+
+**Checkpoint ignore patterns:** These are present in this repository's `.gitignore`:
+
+```gitignore
+*.pt
+*.pth
+*.safetensors
+```
+
+**Hands-on status:** All three practical exercises are complete. The `.gitignore` checkpoint patterns were checked with temporary `.pt`, `.pth`, and `.safetensors` files, and the temporary files were removed. Git history was reviewed with `git log` and `git show --stat`. In `/home/student/ai/ai-engineering-from-scratch`, `origin` points to my fork, `upstream` points to the maintainers' repository, and branch `my-progress` tracks `origin/my-progress`. The pushed commit is `e6a95f699 docs: record course progress`.
+
+Detailed commands and evidence are in [Git & Collaboration notes](phases/00-setup-and-tooling/02-git-and-collaboration/notes.md).
+
+Useful commands for the remaining practice:
+
+```bash
+git -C /home/student/ai/ai-engineering-from-scratch log --oneline
+git -C /home/student/ai/ai-engineering-from-scratch log --oneline -- phases/00-setup-and-tooling
+```
+
+These display the course's complete compact history and then the commits affecting Phase 0.
+
+I inspected commit `f6472e3cd` with:
+
+```bash
+git -C /home/student/ai/ai-engineering-from-scratch show --stat f6472e3cd
+```
+
+It changed `phases/00-setup-and-tooling/01-dev-environment/code/main.rs` with 19 insertions and 8 deletions. The commit message says it centralized repeated `Check` defaults in a constructor.
 
 **PyTorch install and verification:** The CPU build installed and imported successfully. `CUDA available: False` is expected for this CPU-only build. The install command used was:
 
