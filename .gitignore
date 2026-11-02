@@ -6,3 +6,7 @@ venv/
 .env.*
 !.env.example
 .pytest_cache/
+
+*.pt
+*.pth
+*.safetensors
