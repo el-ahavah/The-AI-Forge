@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and four Hello World examples for **Dev Environment** are complete; its 2/3 quiz score leaves `uv` in the review queue. **Git & Collaboration** is complete: quiz 3/3, course fork/branch push, Git history review, and checkpoint ignore check. Next is **GPU Setup & Cloud**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and four Hello World examples for **Dev Environment** are complete; its 2/3 quiz score is recorded, and the `uv` review was cleared on 2026-11-02. **Git & Collaboration** is complete: quiz 3/3, course fork/branch push, Git history review, and checkpoint ignore check. Next is **GPU Setup & Cloud**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -121,7 +121,7 @@ My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and fo
 
 **Completed:** 2026-11-01
 **Quiz:** 2/3  
-**Review next time:** What `uv` does.
+**Review:** `uv` package management reviewed on 2026-11-02.
 
 **Exercise status:** The Python virtual environment, NumPy dot-product check, course verifier, CPU PyTorch import, and Hello World examples in all four lesson languages are complete. The example files are under `phases/00-setup-and-tooling/01-dev-environment/codes/`; the output note is at `phases/00-setup-and-tooling/01-dev-environment/outputs/hello.txt` and records `hello world` for all four.
 
@@ -203,7 +203,7 @@ A Python virtual environment, such as `.venv`, keeps one project's installed pac
 
 NumPy's `dot` function computes a vector dot product. For `[1, 2, 3]` with itself, it calculates `1×1 + 2×2 + 3×3`, giving `14`. This small check confirmed NumPy was installed and working in the environment.
 
-`uv` is a Python package and environment tool. I need to revisit that role because I missed the `uv` question in the lesson quiz.
+`uv` installs and resolves Python packages, and it can create project environments with `uv venv`. I reviewed this role on 2026-11-02 after missing the `uv` question on the lesson quiz.
 
 **My setup evidence:** Python 3.12.3; `.venv` created; NumPy, Matplotlib, and Jupyter installed; dot product output `14`. My earlier setup notes are in [Dev Environment notes](phases/00-setup-and-tooling/01-dev-environment/notes.md).
 
