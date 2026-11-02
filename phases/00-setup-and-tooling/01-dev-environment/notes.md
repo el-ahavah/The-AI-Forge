@@ -75,7 +75,7 @@ CUDA available: False
 
 ## Lesson quiz
 
-Score: **2/3**. Review how `uv` installs and resolves Python packages.
+Score: **2/3**. I reviewed the missed `uv` question on 2026-11-02 and recalled that it installs and resolves Python packages.
 
 ## Re-create after a reset
 
@@ -105,7 +105,7 @@ Node.js does not run `.ts` files directly, so the TypeScript example uses `tsx`.
 
 ## Follow-up
 
-- Review `uv` package management, the topic missed in the quiz.
+- `uv` review is complete; see the review note above.
 - GPU setup is optional; the CPU PyTorch build works for lessons that do not require GPU acceleration.
 
 ## Questions to revisit
