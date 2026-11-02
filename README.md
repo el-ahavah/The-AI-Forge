@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: [Dev Environment](phases/00-setup-and-tooling/01-dev-environment/notes.md) setup exercises and four Hello World examples are complete; quiz score: 2/3. Review topic: `uv` package management. See [my_journal.md](my_journal.md) for tutor setup instructions and plain-language notes.
+Current progress: Phase 0 Lesson 2, [Git & Collaboration](phases/00-setup-and-tooling/02-git-and-collaboration/notes.md), is complete (quiz 3/3; fork/branch, Git history, and `.gitignore` exercises done). Lesson 1 is complete; its `uv` review topic remains in the queue. Next: Phase 0 Lesson 3, GPU Setup & Cloud. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
