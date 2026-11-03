@@ -79,4 +79,4 @@ git remote -v
 
 ## Progress
 
-Quiz and practical exercises are complete. The quiz score was **3/3**. Lesson 1's `uv` review remains in the course review queue. Next lesson: **GPU Setup & Cloud**.
+Quiz and practical exercises are complete. The quiz score was **3/3**. Lesson 1's `uv` review was cleared on 2026-11-02. The next lesson at that point was **GPU Setup & Cloud**.
