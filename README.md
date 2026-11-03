@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: Phase 0 Lessons 1 and 2 are complete. Lesson 1's `uv` review was cleared on 2026-11-02; Lesson 2 quiz score: 3/3. Next: Phase 0 Lesson 3, GPU Setup & Cloud. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
+Current progress: Phase 0 Lessons 1–4 studied. Lesson 4 quiz score: 3/3; its live API request is pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 5, Jupyter Notebooks. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
