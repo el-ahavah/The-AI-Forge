@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. The setup exercises and four Hello World examples for **Dev Environment** are complete; its 2/3 quiz score is recorded, and the `uv` review was cleared on 2026-11-02. **Git & Collaboration** is complete: quiz 3/3, course fork/branch push, Git history review, and checkpoint ignore check. Next is **GPU Setup & Cloud**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–4 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, and learned API keys and requests. The `uv` and GPU timing reviews are cleared. Lesson 4's quiz score is 3/3; I have not made a live API request because I do not have an API key. Next is **Jupyter Notebooks**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -142,7 +142,7 @@ Each example prints `hello world`. TypeScript uses `tsx` because Node.js does no
 
 **Quiz:** 3/3
 
-**Review next time:** Nothing flagged by this quiz. The `uv` review from Lesson 1 is still open.
+**Review note:** Nothing flagged by this quiz. The earlier `uv` review from Lesson 1 was cleared on 2026-11-02.
 
 Git moves selected changes from the working directory to the staging area with `git add`, saves a local snapshot with `git commit`, and sends committed changes to a remote with `git push`. A branch lets me make commits on an isolated line of work; merging applies those changes to another branch. `git log --oneline` gives a compact view of commit history.
 
@@ -206,6 +206,26 @@ NumPy's `dot` function computes a vector dot product. For `[1, 2, 3]` with itsel
 `uv` installs and resolves Python packages, and it can create project environments with `uv venv`. I reviewed this role on 2026-11-02 after missing the `uv` question on the lesson quiz.
 
 **My setup evidence:** Python 3.12.3; `.venv` created; NumPy, Matplotlib, and Jupyter installed; dot product output `14`. My earlier setup notes are in [Dev Environment notes](phases/00-setup-and-tooling/01-dev-environment/notes.md).
+
+### Phase 0 · Lesson 3: GPU Setup & Cloud
+
+**Date:** 2026-11-02
+**Quiz:** 2/3
+**Review:** Cleared on 2026-11-02; GPU operations are asynchronous, so synchronize before stopping the timer.
+
+I used Google Colab's Tesla T4 and confirmed PyTorch could access it. On the second matrix multiplication run, the T4 was about 26× faster than the CPU. The 15.6 GB VRAM gives a rough fp16 parameter-only estimate of 7.8 billion; actual training also needs memory for gradients and other data.
+
+**Artifact:** `phases/00-setup-and-tooling/03-gpu-setup-and-cloud/code/gpu_check.py` and `notes.md`.
+
+### Phase 0 · Lesson 4: APIs & Keys
+
+**Date:** 2026-11-03
+**Quiz:** 3/3
+**Review next time:** Nothing flagged. A live API request remains to try after setting up an API key.
+
+An API key authenticates and authorizes requests, so I should keep it in an environment variable or an ignored `.env` file rather than source code. An SDK handles HTTP and JSON details; raw HTTP makes those steps visible. I learned to recognize authentication errors (401) and rate or spending limit errors (429). I do not have an Anthropic API key yet, so I did not send a live request.
+
+**Artifacts:** `phases/00-setup-and-tooling/04-apis-and-keys/code/first_api_call.py`, `code/first_api_call.ts`, and `outputs/prompt-api-troubleshooter.md`.
 
 ## Notes for future lessons
 
