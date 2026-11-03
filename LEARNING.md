@@ -41,6 +41,7 @@ Become competent in AI engineering and build my personal model.
 | 2026-11-01 | 00-setup-and-tooling/01-dev-environment | 2/3 | Python environment, NumPy check, verifier, CPU PyTorch import, and Hello World examples in Python, TypeScript, Rust, and Julia are complete. Reviewed `uv` on 2026-11-02 and recalled its package install/resolve role. |
 | 2026-11-02 | 00-setup-and-tooling/02-git-and-collaboration | 3/3 | Quiz and practical exercises complete: course fork/branch pushed, Git history reviewed, and checkpoint ignore patterns verified with temporary files. |
 | 2026-11-02 | 00-setup-and-tooling/03-gpu-setup-and-cloud | 2/3 | Verified Colab Tesla T4 with PyTorch, benchmarked matrix multiplication (26x on second run), and estimated 7.8B fp16 parameters; reviewed GPU asynchrony and timing synchronization. |
+| 2026-11-03 | 00-setup-and-tooling/04-apis-and-keys | 3/3 | Learned to keep API keys in environment variables, compared SDK and raw HTTP requests, and identified authentication and rate-limit errors. No live request made because no API key is set up. |
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
