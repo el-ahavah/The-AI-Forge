@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: Phase 0 Lessons 1–4 studied. Lesson 4 quiz score: 3/3; its live API request is pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 5, Jupyter Notebooks. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
+Current progress: Phase 0 Lessons 1–5 studied. Lesson 5 quiz score: 3/3; its notebook and code exercises are prepared but not yet run because this workspace has no Jupyter or data-science packages installed. Lesson 4's live API request is still pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 6, Python Environments. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
@@ -22,6 +22,7 @@ Current progress: Phase 0 Lessons 1–4 studied. Lesson 4 quiz score: 3/3; its l
 - `implementations/` — My lesson implementations.
 - `tests/` — Tests for my code.
 - `projects/` — Projects built using what I learn.
+- `phases/00-setup-and-tooling/` — Phase 0 lesson notes, code, notebooks, and outputs. Lesson 5 artifacts are under `05-jupyter-notebooks/`.
 
 ## Learning principle
 
