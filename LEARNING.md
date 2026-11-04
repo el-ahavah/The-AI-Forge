@@ -42,6 +42,7 @@ Become competent in AI engineering and build my personal model.
 | 2026-11-02 | 00-setup-and-tooling/02-git-and-collaboration | 3/3 | Quiz and practical exercises complete: course fork/branch pushed, Git history reviewed, and checkpoint ignore patterns verified with temporary files. |
 | 2026-11-02 | 00-setup-and-tooling/03-gpu-setup-and-cloud | 2/3 | Verified Colab Tesla T4 with PyTorch, benchmarked matrix multiplication (26x on second run), and estimated 7.8B fp16 parameters; reviewed GPU asynchrony and timing synchronization. |
 | 2026-11-03 | 00-setup-and-tooling/04-apis-and-keys | 3/3 | Learned to keep API keys in environment variables, compared SDK and raw HTTP requests, and identified authentication and rate-limit errors. No live request made because no API key is set up. |
+| 2026-11-04 | 00-setup-and-tooling/05-jupyter-notebooks | 3/3 | Explained shared kernel state, clean reruns, and notebook-versus-script use; prepared the notebook exercises, but dependencies are not installed in this workspace. |
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
