@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–5 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, and completed the Jupyter notebook lesson. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; its notebook and code artifacts are prepared but have not been run because this workspace does not have Jupyter, NumPy, pandas, or Matplotlib installed. Next is **Python Environments**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–5 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, and completed the Jupyter notebook lesson. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook using the repository `.venv`. The clean restart check and Colab GPU exercise remain pending. Next is **Python Environments**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -235,9 +235,11 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Main idea in my own words:** A notebook is a lab bench: code cells run in a shared Python kernel, Markdown cells explain the experiment, and outputs stay beside the code. Shared state makes quick experiments convenient, but cells can accidentally depend on the order I happened to run them. Restarting the kernel and running every cell from the top checks that the notebook is reproducible. I can explore data and make plots in a notebook, then move reusable or production code into scripts.
 
-**Example or evidence:** With `rate = 0.1` and `loss = 4.0`, running `loss = loss * (1 - rate)` gives `3.6`; running the same cell again gives `3.24`. `%timeit` repeats a line and averages timings; `%%time` measures one cell run. I correctly identified hidden cell order as the common source of notebook-only state and scored 3/3 on the lesson quiz.
+**Example or evidence:** `%timeit` measured Python random-number list creation at `11.1 ms ± 587 μs` per loop and NumPy creation at `1.27 ms ± 61.4 μs` per loop (about 8.7× faster in this run). I loaded an in-memory CSV into a DataFrame and displayed its accuracy chart. A cell that initializes `loss = 4.0` before updating it returns `3.6` on each rerun; to observe retained kernel state, the initialization and update must be in separate cells. The clean restart check is still pending. I scored 3/3 on the lesson quiz.
 
-**Artifacts:** [`notebooks/notebook_basics.ipynb`](phases/00-setup-and-tooling/05-jupyter-notebooks/notebooks/notebook_basics.ipynb), [`code/notebook_tips.py`](phases/00-setup-and-tooling/05-jupyter-notebooks/code/notebook_tips.py), [`outputs/prompt-notebook-helper.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/outputs/prompt-notebook-helper.md), and [`notes.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/notes.md). They are prepared but not executed because the available Python environment lacks the required packages.
+**Exercise status:** Local timing and CSV/plot exercises run in JupyterLab from `.venv`. The Restart & Run All check and the Colab GPU exercise remain pending; Colab currently fails while loading its page with a JSON parsing error.
+
+**Artifacts:** [`notebooks/notebook_basics.ipynb`](phases/00-setup-and-tooling/05-jupyter-notebooks/notebooks/notebook_basics.ipynb), [`notebooks/jupyter_exercises.ipynb`](phases/00-setup-and-tooling/05-jupyter-notebooks/notebooks/jupyter_exercises.ipynb), [`code/notebook_tips.py`](phases/00-setup-and-tooling/05-jupyter-notebooks/code/notebook_tips.py), [`outputs/prompt-notebook-helper.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/outputs/prompt-notebook-helper.md), and [`notes.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/notes.md).
 
 ## Notes for future lessons
 
