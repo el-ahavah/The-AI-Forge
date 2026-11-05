@@ -18,8 +18,18 @@ Notebooks are useful for exploring data, prototyping, plotting, and explaining a
 
 ## Exercise artifacts
 
-- [`notebooks/notebook_basics.ipynb`](notebooks/notebook_basics.ipynb) compares Python and NumPy timings, reads a small CSV string into a DataFrame, plots accuracy, and demonstrates kernel memory state.
+- [`notebooks/notebook_basics.ipynb`](notebooks/notebook_basics.ipynb) is the original lesson notebook and remains separate from the hands-on exercise notebook.
+- [`notebooks/jupyter_exercises.ipynb`](notebooks/jupyter_exercises.ipynb) is the separate notebook used for the exercises.
 - [`code/notebook_tips.py`](code/notebook_tips.py) provides the same examples as reusable Python functions and a script entry point.
 - [`outputs/prompt-notebook-helper.md`](outputs/prompt-notebook-helper.md) is the notebook debugging helper prompt produced by this lesson.
 
-The notebook and script are prepared but have not been executed in this workspace. The available system Python has no Jupyter, NumPy, pandas, or Matplotlib installed, and there is no local `.venv` here. Install those packages in the intended environment before running the exercises. No API credentials are needed for this lesson.
+## Exercise status
+
+Ran the exercises locally in JupyterLab using the repository's `.venv`, which has JupyterLab, NumPy, pandas, and Matplotlib installed.
+
+- **Timing comparison:** Python list generation took `11.1 ms ± 587 μs` per loop; NumPy generation took `1.27 ms ± 61.4 μs` per loop. NumPy was about 8.7× faster in this run. Timings vary by machine and session.
+- **CSV and plot:** Completed the in-memory CSV exercise and confirmed the DataFrame and accuracy chart appeared.
+- **Kernel state and clean rerun:** The initial cell reset `loss` to `4.0` on each run, so it returned `3.6` each time. The setup and update were then separated into cells to demonstrate retained kernel state. A final Restart & Run All result has not yet been recorded.
+- **Colab/GPU exercise:** Still pending. Colab displayed a JavaScript JSON parsing error on its homepage, before notebook code could run. No Colab GPU result is recorded.
+
+No API credentials are needed for this lesson.
