@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–5 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, and completed the Jupyter notebook lesson. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook using the repository `.venv`. The clean restart check and Colab GPU exercise remain pending. Next is **Python Environments**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–5 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, and completed the Jupyter notebook lesson. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Next is **Python Environments**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -237,7 +237,7 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Example or evidence:** `%timeit` measured Python random-number list creation at `11.1 ms ± 587 μs` per loop and NumPy creation at `1.27 ms ± 61.4 μs` per loop (about 8.7× faster in this run). I loaded an in-memory CSV into a DataFrame and displayed its accuracy chart. A cell that initializes `loss = 4.0` before updating it returns `3.6` on each rerun; to observe retained kernel state, the initialization and update must be in separate cells. The clean restart check is still pending. I scored 3/3 on the lesson quiz.
 
-**Exercise status:** Local timing and CSV/plot exercises run in JupyterLab from `.venv`. The Restart & Run All check and the Colab GPU exercise remain pending; Colab currently fails while loading its page with a JSON parsing error.
+**Exercise status:** Local timing and CSV/plot exercises ran in JupyterLab from `.venv`. Restart & Run All completed without errors. The script exercise ran in Kaggle; PyTorch 2.11.0+cu130 reported CUDA build 13.0 and GPU availability `True`. The script printed Python/NumPy timings (0.0142 s and 0.0011 s), displayed the model table, saved `notebook_plot.png`, and reported array payload sizes (0.008 MB, 0.8 MB, and 8.0 MB). Colab was unavailable due to a page-loading JSON parsing error, so Kaggle was used for the GPU exercise.
 
 **Artifacts:** [`notebooks/notebook_basics.ipynb`](phases/00-setup-and-tooling/05-jupyter-notebooks/notebooks/notebook_basics.ipynb), [`notebooks/jupyter_exercises.ipynb`](phases/00-setup-and-tooling/05-jupyter-notebooks/notebooks/jupyter_exercises.ipynb), [`code/notebook_tips.py`](phases/00-setup-and-tooling/05-jupyter-notebooks/code/notebook_tips.py), [`outputs/prompt-notebook-helper.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/outputs/prompt-notebook-helper.md), and [`notes.md`](phases/00-setup-and-tooling/05-jupyter-notebooks/notes.md).
 
