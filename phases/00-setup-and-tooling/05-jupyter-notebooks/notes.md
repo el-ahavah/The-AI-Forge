@@ -29,7 +29,8 @@ Ran the exercises locally in JupyterLab using the repository's `.venv`, which ha
 
 - **Timing comparison:** Python list generation took `11.1 ms ± 587 μs` per loop; NumPy generation took `1.27 ms ± 61.4 μs` per loop. NumPy was about 8.7× faster in this run. Timings vary by machine and session.
 - **CSV and plot:** Completed the in-memory CSV exercise and confirmed the DataFrame and accuracy chart appeared.
-- **Kernel state and clean rerun:** The initial cell reset `loss` to `4.0` on each run, so it returned `3.6` each time. The setup and update were then separated into cells to demonstrate retained kernel state. A final Restart & Run All result has not yet been recorded.
-- **Colab/GPU exercise:** Still pending. Colab displayed a JavaScript JSON parsing error on its homepage, before notebook code could run. No Colab GPU result is recorded.
+- **Kernel state and clean rerun:** The initial cell reset `loss` to `4.0` on each run, so it returned `3.6` each time. The setup and update were then separated into cells to demonstrate retained kernel state. Restarted the local notebook kernel and ran all cells from the top; the run completed without errors.
+- **Script/GPU exercise:** Ran `code/notebook_tips.py` in a Kaggle GPU notebook. PyTorch reported `2.11.0+cu130`, CUDA build `13.0`, and `torch.cuda.is_available() == True`. The script completed: Python random generation took `0.0142 s`, NumPy took `0.0011 s`; it displayed the model comparison table, saved `notebook_plot.png`, and reported array payloads of 0.008 MB, 0.8 MB, and 8.0 MB. These timings are specific to that Kaggle session.
+- **Colab:** Not used because its homepage displayed a JavaScript JSON parsing error before notebook code could run.
 
 No API credentials are needed for this lesson.
