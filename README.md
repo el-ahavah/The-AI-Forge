@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: Phase 0 Lessons 1–5 studied. Lesson 5 quiz score: 3/3; the local timing and CSV/plot exercises are complete in a separate notebook, with the clean restart check and Colab GPU exercise still pending. Lesson 4's live API request is still pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 6, Python Environments. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
+Current progress: Phase 0 Lessons 1–5 studied. Lesson 5 quiz score: 3/3; local timing and CSV/plot exercises are complete, `notebook_tips.py` ran in a Kaggle GPU notebook with PyTorch CUDA available, and the local notebook passed Restart & Run All without errors. Lesson 4's live API request is still pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 6, Python Environments. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
