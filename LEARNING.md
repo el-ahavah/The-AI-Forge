@@ -44,6 +44,7 @@ Become competent in AI engineering and build my personal model.
 | 2026-11-03 | 00-setup-and-tooling/04-apis-and-keys | 3/3 | Learned to keep API keys in environment variables, compared SDK and raw HTTP requests, and identified authentication and rate-limit errors. No live request made because no API key is set up. |
 | 2026-11-04 | 00-setup-and-tooling/05-jupyter-notebooks | 3/3 | Quiz complete; locally ran the timing and CSV/plot exercises and confirmed Restart & Run All succeeds. Ran `notebook_tips.py` in Kaggle with CUDA available. |
 | 2026-11-05 | 00-setup-and-tooling/06-python-environments | 3/3 | Setup checks passed; verified NumPy isolation (1.26.4 vs 2.5.4), installed the editable PyTorch/Anthropic project with a CPU wheel and checked its lockfile, then installed and removed a package in a temporary user-site. |
+| 2026-11-09 | 00-setup-and-tooling/07-docker-for-ai | 3/3 | Explained Docker images versus Python environments, image layers, host GPU drivers, volume mounts, and Compose service DNS; container exercises remain unrun because Docker is unavailable in this workspace. |
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
