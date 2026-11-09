@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–7 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, completed the Jupyter notebook lesson, practiced Python environment isolation, and learned how Docker packages AI environments. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Lesson 6's quiz score is 3/3 and all four listed exercises are complete; the local editable project uses CPU-only PyTorch, and the Kaggle GPU check from Lesson 5 confirmed CUDA access. Lesson 7's quiz score is 3/3. Its Dockerfile and Compose configuration are in `phases/00-setup-and-tooling/07-docker-for-ai/code/`, with exercise evidence tracked in that lesson's `notes.md`; Docker is unavailable in this workspace, so the container exercises remain pending. Next is **Editor Setup**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–8 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, completed the Jupyter notebook lesson, practiced Python environment isolation, learned how Docker packages AI environments, and prepared VS Code configuration files. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Lesson 6's quiz score is 3/3 and all four listed exercises are complete; the local editable project uses CPU-only PyTorch, and the Kaggle GPU check from Lesson 5 confirmed CUDA access. Lesson 7's quiz score is 3/3. Its Dockerfile and Compose configuration are in `phases/00-setup-and-tooling/07-docker-for-ai/code/`, with exercise evidence tracked in that lesson's `notes.md`; Docker is unavailable in this workspace, so the container exercises remain pending. Lesson 8's quiz score is 4/4, and its recommended VS Code extensions and settings are in `phases/00-setup-and-tooling/08-editor-setup/code/vscode/`. Installing the editor and extensions, applying the settings, and checking behavior remain pending. Next is **Data Management**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -268,6 +268,20 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 **Exercise status:** Docker is not installed in this workspace; no Docker socket or NVIDIA device is available. The four container exercises (image build and PyTorch check, Compose/Qdrant check, Flask API, and image-size comparison) have not been run. Their evidence fields and pending status are recorded in [`notes.md`](phases/00-setup-and-tooling/07-docker-for-ai/notes.md).
 
 **Artifacts:** [`code/Dockerfile`](phases/00-setup-and-tooling/07-docker-for-ai/code/Dockerfile), [`code/docker-compose.yml`](phases/00-setup-and-tooling/07-docker-for-ai/code/docker-compose.yml), and [`notes.md`](phases/00-setup-and-tooling/07-docker-for-ai/notes.md).
+
+### Phase 0 · Lesson 8: Editor Setup
+
+**Date:** 2026-11-09
+**Quiz:** 4/4
+**Review next time:** Nothing flagged by this quiz.
+
+**Main idea in my own words:** A productive editor setup combines language support, extensions, formatting and type checking, notebook and terminal settings, and remote development tools. Remote SSH lets VS Code work with files and commands on another machine; Pylance type checking catches some mistakes before code runs; format on save keeps style consistent; notebook output scrolling contains long logs.
+
+**Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder.
+
+**Exercise status:** VS Code and the listed extensions were not installed or checked in this session. The settings have not been copied into the user's editor configuration, and Pylance/Black behavior and Remote SSH have not been verified.
+
+**Artifacts:** [`code/vscode/extensions.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [`code/vscode/settings.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), and [`notes.md`](phases/00-setup-and-tooling/08-editor-setup/notes.md).
 
 ## Notes for future lessons
 
