@@ -1,5 +1,7 @@
 """Temporary checks for the Lesson 8 VS Code setup."""
 
+import os
+
 
 def greet(name: str) -> str:
     return f"Hello, {name}"
@@ -13,6 +15,6 @@ greet(25)
 
 
 # Deliberately unformatted: Black should reformat this when the file is saved.
-def calculate_total(price,quantity):
-    total=price*quantity
+def calculate_total(price, quantity):
+    total = price * quantity
     return total
