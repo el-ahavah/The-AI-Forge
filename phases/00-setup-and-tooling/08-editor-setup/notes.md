@@ -57,16 +57,22 @@ Optional extensions from the repository recommendation list that were not shown 
 
 - [x] Verify VS Code, Node.js, and Git.
 - [x] Install and verify the eight core recommended VS Code extensions.
-- [ ] Apply the repository's VS Code settings to the editor without overwriting unrelated existing settings.
-- [ ] Verify Python interpreter selection and Pylance diagnostics.
-- [ ] Verify Black formatting and Ruff linting.
+- [x] Apply the repository's VS Code workspace settings.
+- [x] Create and select the project Python 3.12.3 virtual environment at `.venv/bin/python`.
+- [x] Verify Pylance type diagnostics: the intentional `greet(25)` mismatch produced a warning.
+- [x] Verify Black formatting: the deliberately unformatted function was formatted on save.
+- [ ] Verify Ruff linting.
 - [ ] Open and run a Jupyter notebook in VS Code.
 - [ ] Verify GitLens behavior in the editor.
 - [ ] Configure and test Remote SSH only if a remote machine is available.
+
+### Verification evidence
+
+Created `code/editor_setup_check.py` to test editor behavior. Pylance flagged the intentional string-versus-integer argument mismatch, and Black automatically formatted the deliberately unformatted function on save. The project virtual environment uses Python 3.12.3 and was selected in VS Code.
 
 ## Artifacts
 
 - [`code/vscode/extensions.json`](code/vscode/extensions.json) — recommended extensions for Python, notebooks, linting, Git, and remote development.
 - [`code/vscode/settings.json`](code/vscode/settings.json) — Python analysis, formatting, notebook, terminal, and editor settings.
 
-The editor setup is partially complete: local prerequisites and all eight core extensions are verified. Applying settings and checking editor behavior remain pending.
+The editor setup is partially complete: local prerequisites, all eight core extensions, workspace settings, Python interpreter selection, Pylance diagnostics, and Black format-on-save are verified. Ruff, Jupyter, GitLens, and (if a remote machine is available) Remote SSH checks remain.
