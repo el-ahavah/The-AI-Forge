@@ -34,17 +34,34 @@ node --version
 git --version
 ```
 
-VS Code is already installed and its command-line launcher is available. Node.js and Git are also available. No installation was needed for these tools.
+### Step 2: Install and verify core extensions — complete
+
+Ran `code --list-extensions` on 2026-11-09. All eight core extensions recommended for this lesson are present:
+
+| Extension | Status |
+|---|---|
+| `ms-python.python` — Python | Installed |
+| `ms-python.vscode-pylance` — Pylance | Installed |
+| `ms-toolsai.jupyter` — Jupyter | Installed |
+| `ms-python.debugpy` — Debugpy | Installed |
+| `ms-python.black-formatter` — Black Formatter | Installed |
+| `charliermarsh.ruff` — Ruff | Installed |
+| `eamodio.gitlens` — GitLens | Installed |
+| `ms-vscode-remote.remote-ssh` — Remote SSH | Installed |
+
+Other useful extensions already present include Go, Python Environments, Jupyter Keymap, Jupyter Renderers, Jupyter Cell Tags, Jupyter Slideshow, Remote SSH Edit, and Remote Explorer.
+
+Optional extensions from the repository recommendation list that were not shown in the command output: Remote Containers, YAML, and Even Better TOML. These are not part of the eight-extension core verification.
 
 ### Remaining practical checks
 
-- [ ] Install and verify the eight core recommended VS Code extensions.
-- [ ] Install optional recommended extensions if they are needed.
+- [x] Verify VS Code, Node.js, and Git.
+- [x] Install and verify the eight core recommended VS Code extensions.
 - [ ] Apply the repository's VS Code settings to the editor without overwriting unrelated existing settings.
 - [ ] Verify Python interpreter selection and Pylance diagnostics.
 - [ ] Verify Black formatting and Ruff linting.
 - [ ] Open and run a Jupyter notebook in VS Code.
-- [ ] Verify GitLens.
+- [ ] Verify GitLens behavior in the editor.
 - [ ] Configure and test Remote SSH only if a remote machine is available.
 
 ## Artifacts
@@ -52,4 +69,4 @@ VS Code is already installed and its command-line launcher is available. Node.js
 - [`code/vscode/extensions.json`](code/vscode/extensions.json) — recommended extensions for Python, notebooks, linting, Git, and remote development.
 - [`code/vscode/settings.json`](code/vscode/settings.json) — Python analysis, formatting, notebook, terminal, and editor settings.
 
-The lesson is not yet practically complete. Only the local tool installation check has been verified; extension installation and editor configuration checks remain pending.
+The editor setup is partially complete: local prerequisites and all eight core extensions are verified. Applying settings and checking editor behavior remain pending.
