@@ -58,21 +58,22 @@ Optional extensions from the repository recommendation list that were not shown 
 - [x] Verify VS Code, Node.js, and Git.
 - [x] Install and verify the eight core recommended VS Code extensions.
 - [x] Apply the repository's VS Code workspace settings.
-- [x] Create and select the project Python 3.12.3 virtual environment at `.venv/bin/python`.
-- [x] Verify Pylance type diagnostics: the intentional `greet(25)` mismatch produced a warning.
+- [x] Create and select the project Python 3.12.3 virtual environment at .venv/bin/python.
+- [x] Verify Pylance type diagnostics: the intentional greet(25) mismatch produced a warning.
 - [x] Verify Black formatting: the deliberately unformatted function was formatted on save.
-- [x] Verify Ruff linting: Ruff flagged the intentionally unused `os` import.
-- [ ] Open and run a Jupyter notebook in VS Code.
-- [ ] Verify GitLens behavior in the editor.
-- [ ] Configure and test Remote SSH only if a remote machine is available.
+- [x] Verify Ruff linting: Ruff flagged the intentionally unused os import.
+- [x] Open and run a Jupyter notebook in VS Code using the project's .venv kernel; verify that variables persist across cells and are cleared by restarting the kernel.
+- [x] Verify GitLens behavior by opening the file history for editor_setup_check.py and viewing its commits.
+- [x] Verify VS Code Source Control detects modified and untracked project files; inspect the changes before staging.
+- [ ] Configure and test Remote SSH only if a remote machine is available (optional; no remote host was available for a connection test).
 
 ### Verification evidence
 
-Created `code/editor_setup_check.py` to test editor behavior. Pylance flagged the intentional string-versus-integer argument mismatch, Black automatically formatted the deliberately unformatted function on save, and Ruff flagged the intentionally unused `os` import. The project virtual environment uses Python 3.12.3 and was selected in VS Code.
+Created code/editor_setup_check.py and code/editor_test.ipynb to test editor behavior. Pylance flagged the intentional string-versus-integer argument mismatch, Black automatically formatted the deliberately unformatted function on save, and Ruff flagged the intentionally unused os import. In VS Code, selected the project's Python 3.12.3 virtual environment as the notebook kernel, ran notebook cells successfully, confirmed that variables are shared across cells, and verified that restarting the kernel clears them. GitLens opened the test file's commit history, and Source Control detected the project's modified and untracked files. The lesson changes and supporting AI skill configuration were committed and pushed to GitHub; the final git status confirmed a clean, up-to-date main branch.
 
 ## Artifacts
 
 - [`code/vscode/extensions.json`](code/vscode/extensions.json) — recommended extensions for Python, notebooks, linting, Git, and remote development.
 - [`code/vscode/settings.json`](code/vscode/settings.json) — Python analysis, formatting, notebook, terminal, and editor settings.
 
-The editor setup is partially complete: local prerequisites, all eight core extensions, workspace settings, Python interpreter selection, Pylance diagnostics, and Black format-on-save are verified. Ruff, Jupyter, GitLens, and (if a remote machine is available) Remote SSH checks remain.
+The required local editor setup and practical checks are complete: prerequisites, all eight core extensions, workspace settings, Python interpreter and notebook kernel selection, Pylance diagnostics, Black format-on-save, Ruff linting, Jupyter execution and kernel behavior, GitLens file history, and VS Code Source Control. Remote SSH connection testing remains optional because no remote host was available.
