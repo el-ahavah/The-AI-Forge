@@ -45,6 +45,6 @@ Become competent in AI engineering and build my personal model.
 | 2026-11-04 | 00-setup-and-tooling/05-jupyter-notebooks | 3/3 | Quiz complete; locally ran the timing and CSV/plot exercises and confirmed Restart & Run All succeeds. Ran `notebook_tips.py` in Kaggle with CUDA available. |
 | 2026-11-05 | 00-setup-and-tooling/06-python-environments | 3/3 | Setup checks passed; verified NumPy isolation (1.26.4 vs 2.5.4), installed the editable PyTorch/Anthropic project with a CPU wheel and checked its lockfile, then installed and removed a package in a temporary user-site. |
 | 2026-11-09 | 00-setup-and-tooling/07-docker-for-ai | 3/3 | Explained Docker images versus Python environments, image layers, host GPU drivers, volume mounts, and Compose service DNS; container exercises remain unrun because Docker is unavailable in this workspace. |
-| 2026-11-09 | 00-setup-and-tooling/08-editor-setup | 4/4 | Verified VS Code 1.100.2, Node.js v26.13.0, Git 2.43.0, and all eight core recommended extensions; applying settings and editor behavior checks remain pending. |
+| 2026-11-09 | 00-setup-and-tooling/08-editor-setup | 4/4 | Verified VS Code 1.100.2, Node.js v26.13.0, Git 2.43.0, all eight core extensions, workspace settings, and Python 3.12.3 virtual environment; Pylance diagnostics and Black format-on-save both passed. Ruff, Jupyter, and GitLens checks remain. |
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
