@@ -277,9 +277,9 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Main idea in my own words:** A productive editor setup combines language support, extensions, formatting and type checking, notebook and terminal settings, and remote development tools. Remote SSH lets VS Code work with files and commands on another machine; Pylance type checking catches some mistakes before code runs; format on save keeps style consistent; notebook output scrolling contains long logs.
 
-**Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder. On 2026-11-09, verified the local tools from the terminal: VS Code 1.100.2 (x64) at `/usr/bin/code`, Node.js v26.13.0, and Git 2.43.0. The existing installations mean no installation was needed for these prerequisites.
+**Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder. Verified the local tools: VS Code 1.100.2 (x64) at `/usr/bin/code`, Node.js v26.13.0, and Git 2.43.0. Then ran `code --list-extensions` and confirmed all eight core extensions: Python, Pylance, Jupyter, Debugpy, Black Formatter, Ruff, GitLens, and Remote SSH. Additional installed extensions include Go, Python Environments, Jupyter support extensions, and Remote Explorer.
 
-**Exercise status:** Step 1, local tool verification, is complete. Installing the eight core extensions, applying the repository settings, and checking Python/Pylance, Black, Ruff, Jupyter, and GitLens behavior remain pending. Remote SSH will be checked only if a remote machine is available.
+**Exercise status:** Local prerequisites and all eight core extensions are verified. Applying the repository settings and checking Python/Pylance, Black, Ruff, Jupyter, and GitLens behavior remain pending. Remote SSH will be checked only if a remote machine is available.
 
 **Artifacts:** [`code/vscode/extensions.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [`code/vscode/settings.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), and [`notes.md`](phases/00-setup-and-tooling/08-editor-setup/notes.md).
 
