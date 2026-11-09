@@ -279,7 +279,9 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder. Verified the local tools: VS Code 1.100.2 (x64) at `/usr/bin/code`, Node.js v26.13.0, and Git 2.43.0. Then ran `code --list-extensions` and confirmed all eight core extensions: Python, Pylance, Jupyter, Debugpy, Black Formatter, Ruff, GitLens, and Remote SSH. Additional installed extensions include Go, Python Environments, Jupyter support extensions, and Remote Explorer.
 
-**Exercise status:** Local prerequisites and all eight core extensions are verified. Applying the repository settings and checking Python/Pylance, Black, Ruff, Jupyter, and GitLens behavior remain pending. Remote SSH will be checked only if a remote machine is available.
+**Exercise status:** Verified VS Code 1.100.2 (x64), Node.js v26.13.0, Git 2.43.0, and all eight core extensions. Applied the repository workspace settings from `.vscode/settings.json`. Created the project virtual environment with Python 3.12.3 at `.venv/bin/python` and selected it in VS Code. Confirmed Pylance flags the intentional `greet(25)` type mismatch and Black formats the deliberately unformatted function on save. Ruff, Jupyter execution, and GitLens behavior still need separate checks. Remote SSH will be checked only if a remote machine is available.
+
+**Editor test artifact:** `phases/00-setup-and-tooling/08-editor-setup/code/editor_setup_check.py`.
 
 **Artifacts:** [`code/vscode/extensions.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [`code/vscode/settings.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), and [`notes.md`](phases/00-setup-and-tooling/08-editor-setup/notes.md).
 
