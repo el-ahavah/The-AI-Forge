@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–6 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, completed the Jupyter notebook lesson, and practiced Python environment isolation. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Lesson 6's quiz score is 3/3 and all four listed exercises are complete; the local editable project uses CPU-only PyTorch, and the Kaggle GPU check from Lesson 5 confirmed CUDA access. Next is **Docker for AI**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–7 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, completed the Jupyter notebook lesson, practiced Python environment isolation, and learned how Docker packages AI environments. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Lesson 6's quiz score is 3/3 and all four listed exercises are complete; the local editable project uses CPU-only PyTorch, and the Kaggle GPU check from Lesson 5 confirmed CUDA access. Lesson 7's quiz score is 3/3. Its Dockerfile and Compose configuration are in `phases/00-setup-and-tooling/07-docker-for-ai/code/`, with exercise evidence tracked in that lesson's `notes.md`; Docker is unavailable in this workspace, so the container exercises remain pending. Next is **Editor Setup**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -255,19 +255,19 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Artifacts:** [`code/env_setup.sh`](phases/00-setup-and-tooling/06-python-environments/code/env_setup.sh), [`exercise-project/pyproject.toml`](phases/00-setup-and-tooling/06-python-environments/exercise-project/pyproject.toml), [`exercise-project/uv.lock`](phases/00-setup-and-tooling/06-python-environments/exercise-project/uv.lock), and [`exercise-project/src/lesson6_demo/__init__.py`](phases/00-setup-and-tooling/06-python-environments/exercise-project/src/lesson6_demo/__init__.py).
 
-### Phase 0 · Lesson 6: Python Environments
+### Phase 0 · Lesson 7: Docker for AI
 
-**Date:** 2026-11-05
+**Date:** 2026-11-09
 **Quiz:** 3/3
-**Review next time:** Nothing flagged by the quiz.
+**Review next time:** Nothing flagged by this quiz.
 
-**Main idea in my own words:** A virtual environment gives a project its own Python interpreter and packages, keeping its versions separate from other projects. `pyproject.toml` records project metadata and dependency requirements; a lockfile records the exact resolved versions. Use the package manager associated with the active interpreter, and keep virtual environment directories out of Git.
+**Main idea in my own words:** A Docker image packages an application's environment, including system libraries and Python packages; a container runs that image while sharing the host OS kernel. For GPU use, the image supplies CUDA libraries while the host supplies the NVIDIA driver and GPU. Mounts keep files outside the container, and Docker Compose lets services find each other by service name on a shared network.
 
-**Example or evidence:** Created `/tmp/lesson6-env` using `.venv/bin/python -m venv` after `uv` and the global `python` command were unavailable in the shell. `which python` and `sys.prefix` pointed to `/tmp/lesson6-env`. NumPy was `1.26.4` in the temporary environment and remained `2.5.4` in the repository `.venv`, confirming isolation. Created [`exercise-project/pyproject.toml`](phases/00-setup-and-tooling/06-python-environments/exercise-project/pyproject.toml) with PyTorch and Anthropic as required dependencies.
+**Example or evidence:** Explained why the Dockerfile uses a CUDA `devel` image, why it verifies the `get-pip.py` checksum, and why `python -m pip` ties package installation to the selected interpreter. Identified the host as the source of the NVIDIA driver and GPU, and explained how volumes persist data and Compose service DNS resolves `qdrant`.
 
-**Exercise status:** The editable install began resolving packages but timed out while downloading a 519 MB CUDA/cuDNN dependency at about 3.3 KB/s. Package import verification remains pending. The global-install/uninstall exercise has not been run. The upstream `code/env_setup.sh` exercise file is not present in this checkout; no lockfile has been generated yet.
+**Exercise status:** Docker is not installed in this workspace; no Docker socket or NVIDIA device is available. The four container exercises (image build and PyTorch check, Compose/Qdrant check, Flask API, and image-size comparison) have not been run. Their evidence fields and pending status are recorded in [`notes.md`](phases/00-setup-and-tooling/07-docker-for-ai/notes.md).
 
-**Artifact:** [`exercise-project/pyproject.toml`](phases/00-setup-and-tooling/06-python-environments/exercise-project/pyproject.toml).
+**Artifacts:** [`code/Dockerfile`](phases/00-setup-and-tooling/07-docker-for-ai/code/Dockerfile), [`code/docker-compose.yml`](phases/00-setup-and-tooling/07-docker-for-ai/code/docker-compose.yml), and [`notes.md`](phases/00-setup-and-tooling/07-docker-for-ai/notes.md).
 
 ## Notes for future lessons
 
