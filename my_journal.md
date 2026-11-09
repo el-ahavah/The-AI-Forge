@@ -273,13 +273,13 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Date:** 2026-11-09
 **Quiz:** 4/4
-**Review next time:** Nothing flagged by this quiz.
+**Review next time:** Nothing flagged by the quiz.
 
 **Main idea in my own words:** A productive editor setup combines language support, extensions, formatting and type checking, notebook and terminal settings, and remote development tools. Remote SSH lets VS Code work with files and commands on another machine; Pylance type checking catches some mistakes before code runs; format on save keeps style consistent; notebook output scrolling contains long logs.
 
-**Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder.
+**Example or evidence:** Answered all four post-lesson quiz questions correctly. Added the recommended extension list and VS Code settings as reusable configuration files in this lesson folder. On 2026-11-09, verified the local tools from the terminal: VS Code 1.100.2 (x64) at `/usr/bin/code`, Node.js v26.13.0, and Git 2.43.0. The existing installations mean no installation was needed for these prerequisites.
 
-**Exercise status:** VS Code and the listed extensions were not installed or checked in this session. The settings have not been copied into the user's editor configuration, and Pylance/Black behavior and Remote SSH have not been verified.
+**Exercise status:** Step 1, local tool verification, is complete. Installing the eight core extensions, applying the repository settings, and checking Python/Pylance, Black, Ruff, Jupyter, and GitLens behavior remain pending. Remote SSH will be checked only if a remote machine is available.
 
 **Artifacts:** [`code/vscode/extensions.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [`code/vscode/settings.json`](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), and [`notes.md`](phases/00-setup-and-tooling/08-editor-setup/notes.md).
 
