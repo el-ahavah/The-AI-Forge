@@ -61,14 +61,14 @@ Optional extensions from the repository recommendation list that were not shown 
 - [x] Create and select the project Python 3.12.3 virtual environment at `.venv/bin/python`.
 - [x] Verify Pylance type diagnostics: the intentional `greet(25)` mismatch produced a warning.
 - [x] Verify Black formatting: the deliberately unformatted function was formatted on save.
-- [ ] Verify Ruff linting.
+- [x] Verify Ruff linting: Ruff flagged the intentionally unused `os` import.
 - [ ] Open and run a Jupyter notebook in VS Code.
 - [ ] Verify GitLens behavior in the editor.
 - [ ] Configure and test Remote SSH only if a remote machine is available.
 
 ### Verification evidence
 
-Created `code/editor_setup_check.py` to test editor behavior. Pylance flagged the intentional string-versus-integer argument mismatch, and Black automatically formatted the deliberately unformatted function on save. The project virtual environment uses Python 3.12.3 and was selected in VS Code.
+Created `code/editor_setup_check.py` to test editor behavior. Pylance flagged the intentional string-versus-integer argument mismatch, Black automatically formatted the deliberately unformatted function on save, and Ruff flagged the intentionally unused `os` import. The project virtual environment uses Python 3.12.3 and was selected in VS Code.
 
 ## Artifacts
 
