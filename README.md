@@ -12,7 +12,7 @@ document mistakes, and build projects that apply what I have learned.
 See [LEARNING.md](LEARNING.md) for my curriculum, progress log,
 and topics that need further review.
 
-Current progress: Phase 0 Lessons 1–6 studied. Lesson 6 quiz score: 3/3; setup checks, NumPy environment isolation, editable PyTorch/Anthropic install, lockfile check, and temporary user-site install/uninstall exercise are complete. The local project uses CPU-only PyTorch; Kaggle previously confirmed CUDA access. Lesson 5's local exercises and Kaggle GPU run are complete. Lesson 4's live API request is pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 7, Docker for AI. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
+Current progress: Phase 0 Lessons 1–7 studied. Lesson 7 quiz score: 3/3; added the Dockerfile and Docker Compose configuration. Container exercises remain pending because Docker is not installed in this workspace. Lesson 6 quiz score: 3/3; setup checks, NumPy environment isolation, editable PyTorch/Anthropic install, lockfile check, and temporary user-site install/uninstall exercise are complete. The local project uses CPU-only PyTorch; Kaggle previously confirmed CUDA access. Lesson 5's local exercises and Kaggle GPU run are complete. Lesson 4's live API request is pending an API key. Reviews for `uv` and GPU timing synchronization are cleared. Next: Phase 0 Lesson 8, Editor Setup. See [my_journal.md](my_journal.md) for setup instructions and lesson notes.
 
 ## Repository contents
 
