@@ -4,7 +4,7 @@ Course lesson: [Data Management](https://github.com/rohitg00/ai-engineering-from
 
 **Date studied:** 2026-11-10  
 **Quiz:** Completed — 4/5 (80%)  
-**Practical progress:** Exercises 1, 2, 3, and 4 completed
+**Practical progress:** Exercises 1–5 completed
 
 ## What I learned
 
@@ -50,9 +50,11 @@ python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
 | Inspect dataset structure | Confirmed columns `sentence1`, `sentence2`, `label`, `idx`; inspected feature types; verified 3,668 training examples; scored 3/3 on the understanding check | Completed |
 | Stream C4 for ten seconds | Streamed `allenai/c4` English training split; processed 4,436 examples in 18.36 seconds (about 242 examples/second) after retrieving the first example before timing | Completed, with timing caveat |
 | Compare CSV and Parquet | Saved the 3,668-row MRPC training split as CSV (893.77 KB) and Parquet (608.71 KB); Parquet was 285.06 KB (about 31.9%) smaller; reloaded Parquet and verified all 3,668 rows were preserved | Completed |
-| Create 70/15/15 splits | Split sizes, total row count, and repeatability with the same seed | Pending |
+| Create 70/15/15 splits | Using seed 42, created 2,567 training, 550 validation, and 551 test examples; the split sizes sum to 3,668; repeating the procedure produced identical index sequences for all three splits | Completed |
 
 **CSV/Parquet comparison note:** In this experiment, Parquet used about 31.9% less storage than CSV for the same MRPC training data. Reloading the Parquet file returned 3,668 rows, matching the original dataset. This confirms row-count integrity; it does not by itself compare every field value.
+
+**Reproducible split note:** The 3,668 examples were divided into 2,567 training examples (about 70%), 550 validation examples (about 15%), and 551 test examples (about 15%). All three split comparisons returned `True` when the split operation was repeated with seed 42. The one-example difference between validation and test is due to integer rounding.
 
 **Streaming timing note:** The target was 10 seconds, but the observed elapsed time was 18.36 seconds. Streaming retrieval can block on remote I/O, and the timer is checked between yielded examples, so the measured duration can exceed the target. The result demonstrates successful streaming, not a strict ten-second benchmark.
 
@@ -65,3 +67,4 @@ python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
 - `outputs/prompt-data-helper.md` — prompt for choosing datasets.
 - `exercises/stream_c4.py` — C4 streaming experiment.
 - `exercises/compare_formats.py` — CSV and Parquet comparison experiment.
+- `exercises/create_splits.py` — reproducible 70/15/15 dataset splitting experiment.
