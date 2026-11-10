@@ -284,6 +284,20 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 **Editor test artifacts:** phases/00-setup-and-tooling/08-editor-setup/code/editor_setup_check.py and phases/00-setup-and-tooling/08-editor-setup/code/editor_test.ipynb.
 
 **Artifacts:** [code/vscode/extensions.json](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [code/vscode/settings.json](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), [code/editor_setup_check.py](phases/00-setup-and-tooling/08-editor-setup/code/editor_setup_check.py), [code/editor_test.ipynb](phases/00-setup-and-tooling/08-editor-setup/code/editor_test.ipynb), and [notes.md](phases/00-setup-and-tooling/08-editor-setup/notes.md).
+### Phase 0 · Lesson 9: Data Management
+
+**Date:** 2026-11-10
+**Quiz:** 4/5 (80%)
+**Review next time:** The Hugging Face Hub hosts and shares datasets, models, and other machine-learning resources; GitHub is primarily for source-code hosting and version control.
+
+**Main idea in my own words:** A dataset is a collection of examples used to train, validate, or evaluate an AI system. The Hugging Face `datasets` library helps me load, inspect, stream, cache, and convert datasets. Streaming lets me process examples as they arrive instead of downloading a full dataset first. CSV is easy to inspect, while Parquet is a compact columnar format suited to analytical data. I should keep training, validation, and test data separate, and use a fixed random seed when I need repeatable splits.
+
+**Example or evidence:** Loaded the GLUE MRPC dataset from `nyu-mll/glue`, inspected its sentence-pair columns and labels, and confirmed 3,668 training examples. Streamed 4,436 examples from the English C4 training split in 18.36 seconds (about 242 examples/second); the run exceeded the ten-second target because remote retrieval can block. Saved the MRPC training split as CSV (893.77 KB) and Parquet (608.71 KB); Parquet was about 31.9% smaller, and reloading it restored all 3,668 rows. With seed 42, created repeatable 70/15/15 splits of 2,567 training, 550 validation, and 551 test examples.
+
+**Exercise status:** All five practical exercises were completed. The Hugging Face Hub warning about unauthenticated requests did not prevent public dataset access. The short dataset ID `glue` failed in this environment; the fully qualified ID `nyu-mll/glue` worked.
+
+**Artifacts:** [Lesson 9 notes](phases/00-setup-and-tooling/09-data-management/notes.md), [C4 streaming exercise](phases/00-setup-and-tooling/09-data-management/exercises/stream_c4.py), [CSV/Parquet comparison](phases/00-setup-and-tooling/09-data-management/exercises/compare_formats.py), and [reproducible split exercise](phases/00-setup-and-tooling/09-data-management/exercises/create_splits.py).
+
 ### Phase 0 · Lesson 10: Terminal & Shell
 
 **Date:** 2026-11-10
