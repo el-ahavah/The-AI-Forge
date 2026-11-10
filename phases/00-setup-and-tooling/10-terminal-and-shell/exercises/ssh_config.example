@@ -1,0 +1,10 @@
+# Example only — replace placeholders before using.
+# Save a real entry in ~/.ssh/config and protect the file with chmod 600 ~/.ssh/config.
+Host gpu-box
+    HostName YOUR_SERVER_HOSTNAME_OR_IP
+    User YOUR_SERVER_USERNAME
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
