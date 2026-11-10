@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–8 are studied: I set up the development environment, practiced Git collaboration, used a Colab T4 GPU, learned API keys and requests, completed the Jupyter notebook lesson, practiced Python environment isolation, learned how Docker packages AI environments, and prepared VS Code configuration files. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request is pending an API key. Lesson 5's quiz score is 3/3; I ran its timing and CSV/plot exercises locally in a separate notebook, confirmed Restart & Run All completed without errors, then ran `notebook_tips.py` in Kaggle and confirmed PyTorch CUDA availability. Lesson 6's quiz score is 3/3 and all four listed exercises are complete; the local editable project uses CPU-only PyTorch, and the Kaggle GPU check from Lesson 5 confirmed CUDA access. Lesson 7's quiz score is 3/3. Its Dockerfile and Compose configuration are in `phases/00-setup-and-tooling/07-docker-for-ai/code/`, with exercise evidence tracked in that lesson's `notes.md`; Docker is unavailable in this workspace, so the container exercises remain pending. Lesson 8's quiz score is 4/4, and its recommended VS Code extensions and settings are in `phases/00-setup-and-tooling/08-editor-setup/code/vscode/`. Installing the editor and extensions, applying the settings, and checking behavior remain pending. Next is **Data Management**, then the remaining Phase 0 lessons before Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–10 have been studied. Lesson 9 Data Management quiz: 4/5; all five practical exercises are complete, including GLUE MRPC inspection, C4 streaming, CSV/Parquet comparison, and reproducible dataset splits. Lesson 10 Terminal & Shell quiz: 5/5; its practical exercises (tmux, shell aliases, log filtering, and SSH configuration) are still pending. Earlier lessons covered development setup, Git collaboration, GPU/cloud basics, API keys, Jupyter, Python environments, Docker, and VS Code. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request remains pending an API key, and Lesson 7's container exercises remain pending because Docker is unavailable in this workspace. Next is the remaining Phase 0 work, then Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -284,6 +284,20 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 **Editor test artifacts:** phases/00-setup-and-tooling/08-editor-setup/code/editor_setup_check.py and phases/00-setup-and-tooling/08-editor-setup/code/editor_test.ipynb.
 
 **Artifacts:** [code/vscode/extensions.json](phases/00-setup-and-tooling/08-editor-setup/code/vscode/extensions.json), [code/vscode/settings.json](phases/00-setup-and-tooling/08-editor-setup/code/vscode/settings.json), [code/editor_setup_check.py](phases/00-setup-and-tooling/08-editor-setup/code/editor_setup_check.py), [code/editor_test.ipynb](phases/00-setup-and-tooling/08-editor-setup/code/editor_test.ipynb), and [notes.md](phases/00-setup-and-tooling/08-editor-setup/notes.md).
+### Phase 0 · Lesson 10: Terminal & Shell
+
+**Date:** 2026-11-10
+**Quiz:** 5/5 (100%)
+**Review next time:** Nothing flagged by the quiz.
+
+**Main idea in my own words:** The terminal is the window I use to interact with a shell, which interprets commands. Pipes pass one command's output into another command, while redirects send output or errors to files. A process started in a terminal may receive `SIGHUP` when that terminal closes. `nohup` helps a command ignore that hangup, while `tmux` provides a session I can detach from and reattach to later. SSH provides encrypted remote access, and SSH local port forwarding lets my local browser reach a service such as a remote Jupyter Notebook.
+
+**Example or evidence:** Answered all five lesson quiz questions correctly. Examples reviewed include `python train.py > output.log 2>&1` to write both stdout and stderr to one log, `tmux new -s training` to create a persistent terminal session, and `ssh -L 8888:localhost:8888 user@gpu-box` to forward a remote Jupyter port to the local machine.
+
+**Exercise status:** Exercises 1–4 have not yet been run. They cover tmux panes and detach/reattach, shell aliases, filtering a sample training log with `grep`/`tail`/`awk`, and SSH configuration. The exercise checklist is in [`phases/00-setup-and-tooling/10-terminal-and-shell/notes.md`](phases/00-setup-and-tooling/10-terminal-and-shell/notes.md).
+
+**Artifact:** [`phases/00-setup-and-tooling/10-terminal-and-shell/code/shell_aliases.sh`](phases/00-setup-and-tooling/10-terminal-and-shell/code/shell_aliases.sh)
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
