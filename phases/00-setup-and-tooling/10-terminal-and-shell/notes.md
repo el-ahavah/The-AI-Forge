@@ -124,10 +124,10 @@ Replace the placeholders with real values. Never publish private SSH keys or pas
 
 | # | Task | Status |
 |---|---|---|
-| 1 | Install tmux, create three panes, run a system monitor, a clock, and a harmless Python process; detach and reattach | Pending |
-| 2 | Add selected aliases from `code/shell_aliases.sh` to the shell configuration and verify them | Pending |
-| 3 | Create a sample training log and use `grep`, `tail`, and `awk` to extract loss values | Pending |
-| 4 | Create an SSH config entry using a real host you can access or a localhost practice entry; inspect it with `ssh -G` | Pending |
+| 1 | Prepared `exercises/01-tmux-lab.sh`; run it locally, detach and reattach, then close the session | Prepared — local run pending |
+| 2 | Prepared `exercises/02-install-aliases.sh`; run it, reload the shell config, and test safe aliases | Prepared — local run pending |
+| 3 | Prepared `exercises/03-analyze-log.sh`; run it and verify the extracted loss values and error count | Prepared — local run pending |
+| 4 | Prepared `exercises/04-check-ssh-config.sh`; run the safe localhost config inspection with `ssh -G` | Prepared — local run pending |
 
 **Safety note:** Review every alias before sourcing it. In particular, process-killing aliases can terminate matching Python training jobs. Do not run destructive commands or connect to a remote host unless you understand the target.
 
