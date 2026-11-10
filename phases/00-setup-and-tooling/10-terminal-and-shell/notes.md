@@ -4,8 +4,8 @@ Course lesson: [Terminal & Shell](https://aiengineeringfromscratch.com/lesson?pa
 
 **Lesson type:** Learn  
 **Estimated time:** ~35 minutes  
-**Quiz:** Pending  
-**Practical exercises:** Pending
+**Quiz:** 5/5 (100%) — completed 2026-11-10  
+**Practical exercises:** Not yet completed (four exercises pending)
 
 ## Learning objectives
 
@@ -133,8 +133,9 @@ Replace the placeholders with real values. Never publish private SSH keys or pas
 
 ## Quiz record
 
-To be completed after the lesson quiz.
+Completed 2026-11-10.
 
-- Score: Pending
-- Questions missed: Pending
-- Review topics: Pending
+- Score: 5/5 (100%)
+- Questions missed: None
+- Review topics: None flagged by the quiz
+- Correct concepts: pipe operator (`|`), SIGHUP on terminal closure, tmux detach/reattach and panes, combined stdout/stderr redirection (`> output.log 2>&1`), and SSH local port forwarding (`ssh -L 8888:localhost:8888 user@gpu-box`).
