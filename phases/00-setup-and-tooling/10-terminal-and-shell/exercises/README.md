@@ -12,12 +12,19 @@ It creates a named three-pane tmux session: a system monitor, a live clock, and 
 
 ## Exercise 2 — shell aliases
 
-Run:
+Run the installer with the startup file for your active shell. For Bash:
 ```bash
 bash phases/00-setup-and-tooling/10-terminal-and-shell/exercises/02-install-aliases.sh
 source ~/.bashrc
 ```
-This adds a source line for the existing `code/shell_aliases.sh` file to Bash's startup file. It creates a backup and avoids duplicate entries. For Zsh, pass `~/.zshrc` as the first argument and source that file instead. Review the alias file before loading it; do not invoke process-killing helpers unless you understand their effect.
+
+For Zsh:
+```bash
+bash phases/00-setup-and-tooling/10-terminal-and-shell/exercises/02-install-aliases.sh ~/.zshrc
+source ~/.zshrc
+```
+
+The installer itself runs with Bash, but its optional first argument selects which shell startup file receives the source line for the existing `code/shell_aliases.sh` file. It creates a backup and avoids duplicate entries. Use the startup file for your active shell (check with `echo "$SHELL"`). Review the alias file before loading it; do not invoke process-killing helpers unless you understand their effect.
 
 ## Exercise 3 — log analysis
 
