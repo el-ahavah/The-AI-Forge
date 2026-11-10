@@ -255,6 +255,12 @@ This lesson produces:
 
 **Exercise 4.** Use `train_test_split` twice with a fixed `seed`: first split off 30 percent, then split that 30 percent in half. The three lengths must add up to the original length, and a second run with the same seed must give the same first row in each split.
 
+## Completion Record
+
+- Quiz completed on 2026-11-10: **4/5 (80%)**.
+- Review: The Hugging Face Hub hosts and shares datasets, models, and machine-learning resources.
+- Practical exercises remain pending until their results are recorded in `notes.md`.
+
 ## Key Terms
 
 | Term | What people say | What it actually means |
