@@ -24,9 +24,9 @@ Every AI project starts with data. You need to find datasets, download them, con
 graph TD
     A["Hugging Face Hub"] --> B["datasets library"]
     B --> C["Load / Stream"]
-    C --> D["Local Cache<br/>~/.cache/huggingface/"]
-    B --> E["Format Conversion<br/>CSV, JSON, Parquet, Arrow"]
-    E --> F["Data Splits<br/>train / val / test"]
+    C --> D["Local Cache: ~/.cache/huggingface/"]
+    B --> E["Format Conversion: CSV, JSON, Parquet, Arrow"]
+    E --> F["Data Splits: train / val / test"]
     F --> G["Your Training Pipeline"]
 ```
 
@@ -98,9 +98,9 @@ For AI work, Parquet is a strong choice for stored analytical datasets. Arrow is
 
 Every ML project needs three splits:
 
-- **Train**: The model learns from this (typically 80%)
-- **Validation**: You check progress during training (typically 10%)
-- **Test**: Final evaluation after training is done (typically 10%)
+- **Train**: The model learns from this (typically 70–80%)
+- **Validation**: You check progress during training (typically 10–15%)
+- **Test**: Final evaluation after training is done (typically 10–15%)
 
 Some datasets come pre-split. When they don't, split them yourself:
 
@@ -237,29 +237,33 @@ This downloads a small dataset, converts it, splits it, and prints a summary. It
 This lesson produces:
 - `code/data_utils.py` - reusable data loading and caching utility
 - `outputs/prompt-data-helper.md` - prompt for finding the right dataset for a task
+- `exercises/` - practical scripts for loading, streaming, format comparison, and reproducible splits
 
 ## Exercises
 
-1. Load the `glue` dataset with the `mrpc` config and inspect the first 5 examples
-2. Stream the `c4` dataset and count how many examples you can process in 10 seconds
-3. Convert a dataset to Parquet and compare the file size to CSV
-4. Create a 70/15/15 train/val/test split with a fixed seed and verify the sizes
+1. Load the GLUE MRPC dataset and inspect the first five examples.
+2. Inspect the dataset columns, feature types, and training row count.
+3. Stream the C4 dataset and count how many examples you can process in approximately 10 seconds.
+4. Convert the MRPC training split to CSV and Parquet, compare file sizes, reload Parquet, and verify its row count.
+5. Create a 70/15/15 train/validation/test split with a fixed seed. Verify the sizes add up to the original dataset and repeat the split to check reproducibility.
 
 ### Hints
 
-**Exercise 1.** Call `load_and_inspect("glue", "mrpc")` from `code/data_utils.py`, or `load_dataset("glue", "mrpc")` directly, and print `ds["train"][:5]`. Each example must have `sentence1`, `sentence2`, and `label` fields.
+**Exercise 1.** Use the fully qualified dataset ID: `load_dataset("nyu-mll/glue", "mrpc")`. The short ID `glue` may not resolve in every environment. Inspect `ds["train"][:5]`.
 
-**Exercise 2.** Load the dataset with `streaming=True`, as `stream_dataset` does, and read examples in a loop that stops when `time.time()` passes the start time plus 10 seconds. Print the count; run it twice, because the first run includes the connection start-up.
+**Exercise 2.** Inspect `ds["train"].column_names`, `ds["train"].features`, and `len(ds["train"])`.
 
-**Exercise 3.** Save the same dataset with `to_csv` and `to_parquet`, as `convert_format` does, then compare the sizes with `ls -lh` or `os.path.getsize`. Load the Parquet file back with `load_from_parquet` and check that the row count did not change.
+**Exercise 3.** Load `allenai/c4` with configuration `"en"`, split `"train"`, and `streaming=True`. Count yielded examples and note that remote retrieval can make a ten-second target approximate rather than exact.
 
-**Exercise 4.** Use `train_test_split` twice with a fixed `seed`: first split off 30 percent, then split that 30 percent in half. The three lengths must add up to the original length, and a second run with the same seed must give the same first row in each split.
+**Exercise 4.** Save the same MRPC training split with `to_csv` and `to_parquet`. Compare file sizes with `os.path.getsize` or `ls -lh`. Reload the Parquet file and compare its row count with the original.
+
+**Exercise 5.** Call `train_test_split(test_size=0.30, seed=42)` to create 70% training data and 30% remaining data. Split the remaining data in half with another `train_test_split(test_size=0.50, seed=42)`. Check that the three lengths add up to the original length, then repeat with the same seed and compare the `idx` values in each split.
 
 ## Completion Record
 
 - Quiz completed on 2026-11-10: **4/5 (80%)**.
 - Review: The Hugging Face Hub hosts and shares datasets, models, and machine-learning resources.
-- Practical exercises remain pending until their results are recorded in `notes.md`.
+- Practical exercises 1–5 completed on 2026-11-10. Results and measured evidence are recorded in `notes.md`.
 
 ## Key Terms
 
