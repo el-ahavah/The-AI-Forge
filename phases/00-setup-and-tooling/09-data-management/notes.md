@@ -3,7 +3,8 @@
 Course lesson: [Data Management](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/phases/00-setup-and-tooling/09-data-management/docs/en.md)
 
 **Date studied:** 2026-11-10  
-**Quiz:** Completed — 4/5 (80%)
+**Quiz:** Completed — 4/5 (80%)  
+**Practical progress:** Exercises 1 and 2 completed
 
 ## What I learned
 
@@ -43,14 +44,15 @@ python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
 
 ## Exercise evidence
 
-| Exercise | Evidence to record | Status |
+| Exercise | Evidence | Status |
 |---|---|---|
-| Load GLUE MRPC and inspect five examples | Dataset fields and five sample pairs | Pending |
+| Load GLUE MRPC and inspect five examples | Loaded `nyu-mll/glue` with the `mrpc` configuration; inspected five sentence pairs and their labels | Completed |
+| Inspect dataset structure | Confirmed columns `sentence1`, `sentence2`, `label`, `idx`; inspected feature types; verified 3,668 training examples; scored 3/3 on the understanding check | Completed |
 | Stream C4 for ten seconds | Number of examples processed and elapsed time | Pending |
 | Compare CSV and Parquet | File sizes and row count after reloading Parquet | Pending |
 | Create 70/15/15 splits | Split sizes, total row count, and repeatability with the same seed | Pending |
 
-The quiz is complete, but the practical exercises have not yet been recorded as completed.
+**Environment note:** The short dataset identifier `glue` produced a Hugging Face repository-ID error in this environment. The fully qualified ID `nyu-mll/glue` loaded successfully. An unauthenticated Hub warning appeared, but it did not prevent the public dataset from loading.
 
 ## Artifacts
 
