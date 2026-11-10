@@ -4,7 +4,7 @@ Course lesson: [Data Management](https://github.com/rohitg00/ai-engineering-from
 
 **Date studied:** 2026-11-10  
 **Quiz:** Completed — 4/5 (80%)  
-**Practical progress:** Exercises 1 and 2 completed
+**Practical progress:** Exercises 1, 2, and 3 completed
 
 ## What I learned
 
@@ -48,9 +48,11 @@ python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
 |---|---|---|
 | Load GLUE MRPC and inspect five examples | Loaded `nyu-mll/glue` with the `mrpc` configuration; inspected five sentence pairs and their labels | Completed |
 | Inspect dataset structure | Confirmed columns `sentence1`, `sentence2`, `label`, `idx`; inspected feature types; verified 3,668 training examples; scored 3/3 on the understanding check | Completed |
-| Stream C4 for ten seconds | Number of examples processed and elapsed time | Pending |
+| Stream C4 for ten seconds | Streamed `allenai/c4` English training split; processed 4,436 examples in 18.36 seconds (about 242 examples/second) after retrieving the first example before timing | Completed, with timing caveat |
 | Compare CSV and Parquet | File sizes and row count after reloading Parquet | Pending |
 | Create 70/15/15 splits | Split sizes, total row count, and repeatability with the same seed | Pending |
+
+**Streaming timing note:** The target was 10 seconds, but the observed elapsed time was 18.36 seconds. Streaming retrieval can block on remote I/O, and the timer is checked between yielded examples, so the measured duration can exceed the target. The result demonstrates successful streaming, not a strict ten-second benchmark.
 
 **Environment note:** The short dataset identifier `glue` produced a Hugging Face repository-ID error in this environment. The fully qualified ID `nyu-mll/glue` loaded successfully. An unauthenticated Hub warning appeared, but it did not prevent the public dataset from loading.
 
@@ -59,3 +61,4 @@ python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
 - `docs/en.md` — course lesson guide.
 - `code/data_utils.py` — reusable dataset utilities.
 - `outputs/prompt-data-helper.md` — prompt for choosing datasets.
+- `exercises/stream_c4.py` — C4 streaming experiment.
