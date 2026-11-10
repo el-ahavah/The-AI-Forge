@@ -5,7 +5,7 @@ Course lesson: [Terminal & Shell](https://aiengineeringfromscratch.com/lesson?pa
 **Lesson type:** Learn  
 **Estimated time:** ~35 minutes  
 **Quiz:** 5/5 (100%) — completed 2026-11-10  
-**Practical exercises:** Not yet completed (four exercises pending)
+**Practical exercises:** 4/4 passed locally — completed 2026-11-10
 
 ## Learning objectives
 
@@ -124,12 +124,14 @@ Replace the placeholders with real values. Never publish private SSH keys or pas
 
 | # | Task | Status |
 |---|---|---|
-| 1 | Prepared `exercises/01-tmux-lab.sh`; run it locally, detach and reattach, then close the session | Prepared — local run pending |
-| 2 | Prepared `exercises/02-install-aliases.sh`; run it, reload the shell config, and test safe aliases | Prepared — local run pending |
-| 3 | Prepared `exercises/03-analyze-log.sh`; run it and verify the extracted loss values and error count | Prepared — local run pending |
-| 4 | Prepared `exercises/04-check-ssh-config.sh`; run the safe localhost config inspection with `ssh -G` | Prepared — local run pending |
+| 1 | `exercises/01-tmux-lab.sh`; displayed system monitor, live clock, and Python heartbeat in three panes | Passed — all three panes ran |
+| 2 | `exercises/02-install-aliases.sh`; loaded and verified aliases in the active Zsh shell | Passed — `ll`, `gpu`, `checkenv`, and `ta` verified |
+| 3 | `exercises/03-analyze-log.sh`; inspected the generated training log with `grep`, `tail`, and `awk` | Passed — one warning, one error, seven loss values identified |
+| 4 | `exercises/04-check-ssh-config.sh`; inspected temporary localhost settings with `ssh -G` | Passed — no remote connection; `~/.ssh/config` unchanged |
 
-**Safety note:** Review every alias before sourcing it. In particular, process-killing aliases can terminate matching Python training jobs. Do not run destructive commands or connect to a remote host unless you understand the target.
+**Shell configuration note:** This workspace uses Zsh (`/usr/bin/zsh`). The alias installer initially added its source line to `~/.bashrc`, which is not the active shell configuration. I added the alias-file source line to `~/.zshrc` and verified the aliases there. Sourcing the Bash startup file from Zsh produced Bash-specific `shopt` and completion errors; do not source `~/.bashrc` from Zsh.
+
+**Safety note:** Review every alias before sourcing it. In particular, `killtraining` and `killtrain` can terminate matching Python processes. Do not run destructive commands or connect to a remote host unless you understand the target.
 
 ## Quiz record
 
