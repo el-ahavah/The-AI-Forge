@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stage": "pre",
+      "question": "Why is it important to have separate train, validation, and test splits in machine learning?",
+      "options": [
+        "To ensure each split uses a different file format",
+        "To make the dataset smaller so training is faster",
+        "To distribute data across multiple GPUs",
+        "To evaluate model performance on unseen data and prevent overfitting"
+      ],
+      "correct": 3,
+      "explanation": "The training set teaches the model, the validation set helps guide choices during development, and the test set provides a final evaluation on data that was held back."
+    },
+    {
+      "stage": "pre",
+      "question": "What is the Hugging Face Hub primarily used for in AI/ML workflows?",
+      "options": [
+        "Managing Python virtual environments",
+        "Version controlling source code like GitHub",
+        "Running GPU training jobs in the cloud",
+        "Hosting and sharing datasets, models, and ML artifacts"
+      ],
+      "correct": 3,
+      "explanation": "The Hugging Face Hub hosts and shares models, datasets, and related machine-learning artifacts."
+    },
+    {
+      "stage": "post",
+      "question": "What advantage does the Parquet format have over CSV for storing ML datasets?",
+      "options": [
+        "Parquet supports more data types than CSV",
+        "Parquet files are human-readable in any text editor",
+        "Parquet uses columnar storage for smaller file sizes and faster read speeds",
+        "Parquet files can be edited in spreadsheet applications"
+      ],
+      "correct": 2,
+      "explanation": "Parquet is a columnar format that often compresses well and supports efficient column-oriented reads."
+    },
+    {
+      "stage": "post",
+      "question": "What does streaming=True do when loading a dataset with the Hugging Face datasets library?",
+      "options": [
+        "Converts the dataset to a streaming video format",
+        "Enables real-time updates as new data is added to the Hub",
+        "Loads data row by row without downloading the full dataset to disk",
+        "Downloads the dataset faster using parallel connections"
+      ],
+      "correct": 2,
+      "explanation": "Streaming creates an iterable dataset that fetches examples on demand, which is useful for datasets too large to download in full."
+    },
+    {
+      "stage": "post",
+      "question": "When should you use DVC instead of just .gitignore for large files?",
+      "options": [
+        "When you need to reproduce exact experiments across machines with versioned data",
+        "When you only have CSV files in your project",
+        "When your dataset is smaller than 1 MB",
+        "When you are working alone on a personal project"
+      ],
+      "correct": 0,
+      "explanation": "DVC tracks data versions with small pointer files in Git while storing the actual data in configured remote storage."
+    }
+  ]
+}
