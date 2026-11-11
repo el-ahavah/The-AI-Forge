@@ -4,7 +4,7 @@ Course lesson: [Linux for AI](https://github.com/rohitg00/ai-engineering-from-sc
 
 **Lesson type:** Learn  
 **Estimated time:** ~30 minutes  
-**Status:** Quiz completed; practical exercises pending
+**Status:** Quiz passed; practical work partially completed
 
 ## Learning objectives
 
@@ -241,6 +241,6 @@ The five source-course exercises and their safe execution notes are in [exercise
 
 ## Quiz record
 
-**Status:** Not attempted  
-**Score:** Pending  
-**Review topics:** To be recorded after the quiz.
+**Status:** Passed  
+**Score:** 4/5 (80%)  
+**Review topic:** `sudo` runs a command with administrator (root) privileges. No formal review queue entry is required because the score is above 70%.
