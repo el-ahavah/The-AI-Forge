@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–10 have been studied. Lesson 9 Data Management quiz: 4/5; all five practical exercises are complete, including GLUE MRPC inspection, C4 streaming, CSV/Parquet comparison, and reproducible dataset splits. Lesson 10 Terminal & Shell quiz: 5/5; all four practical exercises are complete (tmux panes, Zsh aliases, log filtering, and safe SSH configuration inspection). Earlier lessons covered development setup, Git collaboration, GPU/cloud basics, API keys, Jupyter, Python environments, Docker, and VS Code. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request remains pending an API key, and Lesson 7's container exercises remain pending because Docker is unavailable in this workspace. Next is the remaining Phase 0 work, then Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–11 have been studied. Lesson 9 Data Management quiz: 4/5; all five practical exercises are complete, including GLUE MRPC inspection, C4 streaming, CSV/Parquet comparison, and reproducible dataset splits. Lesson 10 Terminal & Shell quiz: 5/5; all four practical exercises are complete (tmux panes, Zsh aliases, log filtering, and safe SSH configuration inspection). Earlier lessons covered development setup, Git collaboration, GPU/cloud basics, API keys, Jupyter, Python environments, Docker, and VS Code. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request remains pending an API key, and Lesson 7's container exercises remain pending because Docker is unavailable in this workspace. Next is the remaining Phase 0 work, including pending practical checks, then Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -311,6 +311,20 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 **Exercise status:** All four practical exercises passed locally. The tmux lab displayed the system monitor, live clock, and Python heartbeat in separate panes. The alias installer first added a Bash startup entry, but this machine uses Zsh; after confirming `/usr/bin/zsh`, I sourced the shared aliases file from `~/.zshrc` and verified `ll`, `gpu`, `checkenv`, and `ta`. The log-analysis script used `grep`, `tail`, and `awk` to identify one warning, one error, and seven loss values, including a non-finite `nan` loss. The SSH exercise used `ssh -G` to inspect a temporary localhost configuration without opening a connection or changing `~/.ssh/config`. The generated sample log was removed after verification, leaving the repository clean. The exercise checklist is in [`phases/00-setup-and-tooling/10-terminal-and-shell/notes.md`](phases/00-setup-and-tooling/10-terminal-and-shell/notes.md).
 
 **Artifact:** [`phases/00-setup-and-tooling/10-terminal-and-shell/code/shell_aliases.sh`](phases/00-setup-and-tooling/10-terminal-and-shell/code/shell_aliases.sh)
+
+### Phase 0 · Lesson 11: Linux for AI
+
+**Date:** 2026-11-11  
+**Quiz:** 4/5 (80%) — passed  
+**Review next time:** Question 2: `sudo` runs a command with administrator (root) privileges. The formal review threshold is below 70%, so this score does not add a lesson to the review queue.
+
+**Main idea in my own words:** Linux is the operating system commonly used on AI servers and cloud GPU machines. I need to navigate its single directory tree, create and manage files, understand permissions, install packages carefully, inspect processes and disk usage, transfer files over SSH, and use tmux to keep terminal work running after disconnecting. I should use administrator privileges only when necessary and inspect paths before deleting or changing files.
+
+**Example or evidence:** The quiz confirmed that `~` means the current user's home directory, `chmod +x script.sh` adds execute permission, `du` with `sort` helps find large directories, and macOS `sed -i` requires an empty string argument after `-i`. I missed the question about `sudo`.
+
+**Exercise status:** Five practical exercises have been prepared but are not yet verified locally: filesystem navigation and file creation, process monitoring, tmux detach/reattach, disk/cache inspection, and remote file transfer. The remote transfer exercise remains dependent on having an authorized SSH host. No practical exercise is being marked complete yet.
+
+**Artifacts:** [Lesson notes](phases/00-setup-and-tooling/11-linux-for-ai/notes.md), [official lesson](phases/00-setup-and-tooling/11-linux-for-ai/docs/en.md), [quiz](phases/00-setup-and-tooling/11-linux-for-ai/quiz.json), and [practical exercise guide](phases/00-setup-and-tooling/11-linux-for-ai/exercises/README.md).
 
 ## Notes for future lessons
 
