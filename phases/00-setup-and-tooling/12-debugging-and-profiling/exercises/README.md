@@ -86,6 +86,10 @@ Use `q` to exit if needed. If your variable names differ, inspect variables that
 
 **Record:** which values you inspected and whether you successfully continued execution.
 
+## Quiz result
+
+**5/5 (100%) — passed.** All five questions were answered correctly. No formal review is required.
+
 ## Progress
 
 | Exercise | Status |
