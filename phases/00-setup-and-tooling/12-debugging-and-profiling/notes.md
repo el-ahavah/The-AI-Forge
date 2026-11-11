@@ -76,11 +76,11 @@ tensorboard --logdir=runs
 ## Lesson 12 checklist
 
 - [ ] Read the official lesson.
-- [ ] Complete the five-question quiz.
+- [x] Complete the five-question quiz (5/5, 100%).
 - [ ] Run and inspect `code/debug_tools.py`.
 - [ ] Complete or document each practical exercise.
-- [ ] Update the lesson tracker and journal after the quiz and practical work.
+- [x] Update the lesson tracker and journal with the quiz result; practical work remains pending.
 
 ## Quiz result
 
-Pending.
+**5/5 (100%) — passed.** All five quiz questions were answered correctly. No formal review topic was flagged. Practical exercises have not yet been completed.
