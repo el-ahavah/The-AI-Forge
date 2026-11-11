@@ -77,10 +77,20 @@ tensorboard --logdir=runs
 
 - [ ] Read the official lesson.
 - [x] Complete the five-question quiz (5/5, 100%).
-- [ ] Run and inspect `code/debug_tools.py`.
-- [ ] Complete or document each practical exercise.
-- [x] Update the lesson tracker and journal with the quiz result; practical work remains pending.
+- [x] Run and inspect `code/debug_tools.py`; memory tracking and structured logging ran, while PyTorch-only tensor diagnostics were skipped because PyTorch is unavailable.
+- [x] Complete the available practical exercises and document dependency-blocked work.
+- [x] Update the lesson tracker and journal with quiz and practical results.
 
 ## Quiz result
 
-**5/5 (100%) — passed.** All five quiz questions were answered correctly. No formal review topic was flagged. Practical exercises have not yet been completed.
+**5/5 (100%) — passed.** All five quiz questions were answered correctly. No formal review topic was flagged.
+
+## Practical results
+
+- **Exercise 1 — Debugging toolkit: Partially completed.** The script ran. The `tracemalloc` memory demonstration and structured logging ran successfully. Tensor diagnostics, NaN detection, and gradient demonstrations were skipped because PyTorch is not installed.
+- **Exercise 2 — cProfile: Completed.** The profiler reported 9,274 calls (8,982 primitive) in 0.026 seconds. Of the user-defined functions, `demo_memory_tracking()` had the highest cumulative time at 0.010 seconds; `main()` took 0.011 seconds cumulatively.
+- **Exercise 3 — tracemalloc: Completed.** The snapshot reported 1,064 KiB allocated across 2,001 allocations, averaging 545 bytes. The allocation was attributed to line 6 of the one-line Python command.
+- **Exercise 4 — TensorBoard: Blocked by dependencies.** Neither TensorBoard nor PyTorch is installed in the available Python environment. No package installation was attempted.
+- **Exercise 5 — pdb: Completed.** Used `breakpoint()`, inspected `number` and `total` with `p`, stepped with `n`, and continued with `c`. The program printed `Total: 60`.
+
+Practical status: **3 completed, 1 partially completed, and 1 blocked by unavailable dependencies.**
