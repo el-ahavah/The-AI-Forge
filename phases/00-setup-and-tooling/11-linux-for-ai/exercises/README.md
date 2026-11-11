@@ -123,6 +123,10 @@ Run the rsync command a second time and observe that an unchanged file usually r
 
 If you do not have a remote host, mark this exercise **pending — remote host unavailable**. Do not treat a local copy as proof of an SSH transfer.
 
+## Quiz result
+
+The official Lesson 11 quiz is complete: **4/5 (80%) — passed**. Question 2 was missed; remember that `sudo` runs a command with administrator (root) privileges. This quiz result does not mark the practical exercises complete.
+
 ## Completion record
 
 | Exercise | What to verify | Status |
