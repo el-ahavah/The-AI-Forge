@@ -4,7 +4,7 @@ Course lesson: [Linux for AI](https://github.com/rohitg00/ai-engineering-from-sc
 
 **Lesson type:** Learn  
 **Estimated time:** ~30 minutes  
-**Status:** In progress
+**Status:** Quiz completed; practical exercises pending
 
 ## Learning objectives
 
