@@ -111,7 +111,7 @@ After every completed lesson, automatically update `LEARNING.md` with the score 
 
 ## Where I am starting
 
-My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–12 have been studied. Lesson 9 Data Management quiz: 4/5; all five practical exercises are complete, including GLUE MRPC inspection, C4 streaming, CSV/Parquet comparison, and reproducible dataset splits. Lesson 10 Terminal & Shell quiz: 5/5; all four practical exercises are complete (tmux panes, Zsh aliases, log filtering, and safe SSH configuration inspection). Lesson 11 Linux for AI quiz: 4/5; three practical exercises are complete, tmux is pending because this account lacks administrator access, and remote file transfer was skipped. Earlier lessons covered development setup, Git collaboration, GPU/cloud basics, API keys, Jupyter, Python environments, Docker, and VS Code. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request remains pending an API key, and Lesson 7's container exercises remain pending because Docker is unavailable in this workspace. Lesson 12 Debugging & Profiling quiz: 5/5 (100%); practical exercises are pending. Next is the remaining Phase 0 work, including pending practical checks, then Phase 1, **Math Foundations**.
+My study plan starts at **Phase 0: Setup & Tooling**. Lessons 1–12 have been studied. Lesson 9 Data Management quiz: 4/5; all five practical exercises are complete, including GLUE MRPC inspection, C4 streaming, CSV/Parquet comparison, and reproducible dataset splits. Lesson 10 Terminal & Shell quiz: 5/5; all four practical exercises are complete (tmux panes, Zsh aliases, log filtering, and safe SSH configuration inspection). Lesson 11 Linux for AI quiz: 4/5; three practical exercises are complete, tmux is pending because this account lacks administrator access, and remote file transfer was skipped. Earlier lessons covered development setup, Git collaboration, GPU/cloud basics, API keys, Jupyter, Python environments, Docker, and VS Code. The `uv` and GPU timing reviews are cleared. Lesson 4's live API request remains pending an API key, and Lesson 7's container exercises remain pending because Docker is unavailable in this workspace. Lesson 12 Debugging & Profiling quiz: 5/5 (100%); three practical exercises are complete, the debugging toolkit is partially complete because PyTorch is unavailable, and TensorBoard is blocked because TensorBoard and PyTorch are not installed. Next is the remaining Phase 0 work, including pending practical checks, then Phase 1, **Math Foundations**.
 
 ## Learning record
 
@@ -336,7 +336,14 @@ An API key authenticates and authorizes requests, so I should keep it in an envi
 
 **Quiz evidence:** Answered all five questions correctly. The quiz covered silent AI bugs, the `pdb` debugger, NaN loss as a sign of numerical instability or invalid operations, timing code with Python's `time` module, and TensorBoard's role in visualizing training metrics and experiment results.
 
-**Exercise status:** All five practical exercises are pending. They cover the debugging toolkit, `cProfile`, `tracemalloc`, TensorBoard, and `breakpoint()`/`pdb`. No practical results are claimed yet.
+**Exercise evidence and status:**
+- **Debugging toolkit — Partially completed:** Ran `code/debug_tools.py`. The memory-tracking and structured-logging demonstrations worked. PyTorch-only tensor diagnostics, NaN detection, and gradient demonstrations were skipped because PyTorch is unavailable.
+- **Execution profiling — Completed:** `cProfile` reported 9,274 calls (8,982 primitive) in 0.026 seconds. `demo_memory_tracking()` was the slowest user-defined function at 0.010 seconds cumulative time.
+- **Memory allocations — Completed:** `tracemalloc` reported 1,064 KiB across 2,001 allocations, averaging 545 bytes; the allocation was attributed to line 6 of the command.
+- **TensorBoard — Blocked:** The environment reported that neither TensorBoard nor PyTorch is installed. No installation was attempted.
+- **Python debugger — Completed:** Used `breakpoint()`, inspected `number` and `total` with `p`, stepped with `n`, and continued with `c`. The script printed `Total: 60`.
+
+Overall, three practical exercises are complete, one is partially complete, and one is blocked by unavailable dependencies.
 
 **Artifacts:** [Lesson notes](phases/00-setup-and-tooling/12-debugging-and-profiling/notes.md), [debugging toolkit](phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py), and [practical exercise guide](phases/00-setup-and-tooling/12-debugging-and-profiling/exercises/README.md).
 
