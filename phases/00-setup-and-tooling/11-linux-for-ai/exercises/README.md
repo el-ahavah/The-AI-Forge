@@ -42,7 +42,7 @@ If it is installed, run:
 htop
 ```
 
-Identify the process using the most memory. Press `q` to exit. If htop is missing and you have permission to install packages, ask before using `sudo apt update` or `sudo apt install htop`; on a managed machine, do not change system packages without authorization. You can use `top` as a read-only alternative.
+Identify the process using the most memory. Press `q` to exit. If htop is missing and you have permission to install packages, ask before using `sudo apt update` or `sudo apt install htop`; on a managed machine, do not change system packages without authorization. You can use `top` as a read-only alternative. **Result:** `htop` was unavailable, so `top` was used. Firefox was identified as the highest-memory process in the observed output (307,608 KB, 8.0% memory, 5.9% CPU). Exercise complete.
 
 ## Exercise 3 — Detach and reattach a tmux session
 
@@ -77,7 +77,7 @@ The `sleep` command should still be running. Press **Ctrl+C** to stop it, then e
 exit
 ```
 
-If tmux is not installed, do not install it without permission. Record the dependency as pending.
+If tmux is not installed, do not install it without permission. Record the dependency as pending. **Result:** `tmux` was not installed. The `student` account is not in the sudoers file; `conda`, `mamba`, and `micromamba` were unavailable, and the expected `libevent`/`ncurses` development headers were not found in standard locations. No installation was attempted. Exercise remains pending until an administrator installs tmux or provides an approved route.
 
 ## Exercise 4 — Inspect disk and cache usage
 
@@ -95,7 +95,7 @@ If the cache directory exists, inspect its immediate subdirectories:
 du -sh ~/.cache/* 2>/dev/null | sort -h
 ```
 
-Identify the file system containing your home directory and note its available space. These commands inspect storage; they do not delete anything. Do not clear caches or remove checkpoints as part of this exercise.
+Identify the file system containing your home directory and note its available space. These commands inspect storage; they do not delete anything. Do not clear caches or remove checkpoints as part of this exercise. **Result:** The root/home filesystem is 233 GB, with 36 GB used and 185 GB available (17% used). The user cache is 15 MB; `tracker3` is the largest listed cache directory at 12 MB. Exercise complete.
 
 ## Exercise 5 — Compare scp and rsync
 
@@ -121,7 +121,7 @@ rsync -avP ~/linux-ai-practice/transfer-test.txt USER@HOST:~/
 
 Run the rsync command a second time and observe that an unchanged file usually requires little or no data transfer. Replace `USER` and `HOST` only with the real details of an authorized server.
 
-If you do not have a remote host, mark this exercise **pending — remote host unavailable**. Do not treat a local copy as proof of an SSH transfer.
+If you do not have a remote host, mark this exercise **skipped — no remote SSH details supplied**. Do not treat a local copy as proof of an SSH transfer. **Result:** The local test file was created, but the user chose to skip the remote transfer. No scp or rsync connection was attempted.
 
 ## Quiz result
 
@@ -131,10 +131,10 @@ The official Lesson 11 quiz is complete: **4/5 (80%) — passed**. Question 2 wa
 
 | Exercise | What to verify | Status |
 |---|---|---|
-| 1. Filesystem navigation | Three empty files appear in the practice directory | Pending |
-| 2. Process monitoring | Identify the highest-memory process in htop or top | Pending |
-| 3. tmux session | Detach, list, and reattach while sleep is still running | Pending |
-| 4. Disk usage | Read available disk space and inspect cache size | Pending |
-| 5. Remote transfer | Compare scp and rsync on an authorized remote host | Pending |
+| 1. Filesystem navigation | Three empty files appear in the practice directory | Complete |
+| 2. Process monitoring | Identified Firefox using `top` | Complete |
+| 3. tmux session | Cannot proceed until tmux is installed with administrator support | Pending |
+| 4. Disk usage | Checked filesystem capacity and cache sizes | Complete |
+| 5. Remote transfer | User elected to skip; no remote transfer performed | Skipped |
 
 **Safety:** Avoid running `rm -rf` on paths you have not checked. Do not use `sudo` to bypass an unexplained permission error. Do not force-kill processes or change system services unless you understand the impact and are authorized to do so.
