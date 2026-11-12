@@ -347,6 +347,22 @@ Overall, three practical exercises are complete, one is partially complete, and 
 
 **Artifacts:** [Lesson notes](phases/00-setup-and-tooling/12-debugging-and-profiling/notes.md), [debugging toolkit](phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py), and [practical exercise guide](phases/00-setup-and-tooling/12-debugging-and-profiling/exercises/README.md).
 
+### Phase 0 · Lesson 13: Python for AI Engineering
+
+**Date:** 2026-11-12  
+**Quiz:** 6/6 (100%) — passed  
+**Review next time:** Nothing flagged by the quiz. The code review identified optional follow-up improvements for validating record shapes and required file columns.
+
+**Main idea in my own words:** Python for AI engineering means using core Python features carefully to prepare and process data. I learned how object references can make lists share changes, how generators produce values one at a time, how to split data repeatably, how to create mini-batches, and why training and test data must stay separate. I also learned to fit standardization statistics on training data only and reuse them when transforming test data.
+
+**Example or evidence:** Ran the toolkit with Python 3.12.3. The CSV and JSON round-trips were correct; the dataset split contained 80 training and 20 test records with no overlap; and the mini-batch sizes were five groups of 16. Verified that seed 42 reproduces the same split and seed 10 produces a different split. Consumed a generator until it raised `StopIteration`. Demonstrated the shared mutable-default bug and fixed it using `None`. Standardized training and test rows with one transformation fitted only on training rows.
+
+**Exercise status:** All seven practical exercises are complete. The original unit tests passed (14 tests). After the code review, added validation that `best_time()` requires at least one repeat and added a regression test for `repeats=0`. The final test run passed all 15 tests.
+
+**Code review:** Reviewed `code/main.py` using `outputs/prompt-python-review.md`. Confirmed good practices including a local seeded random generator, context-managed UTF-8 file handling, strict vector-length checks, and training-only standardization. Suggested explicit record-shape and required-column validation as possible future improvements; those were not implemented in this lesson.
+
+**Artifacts:** [Lesson notes](phases/00-setup-and-tooling/13-python-for-ai-engineering/notes.md), [exercise guide](phases/00-setup-and-tooling/13-python-for-ai-engineering/exercises/README.md), [toolkit](phases/00-setup-and-tooling/13-python-for-ai-engineering/code/main.py), [unit tests](phases/00-setup-and-tooling/13-python-for-ai-engineering/code/tests/test_main.py), and [code-review prompt](phases/00-setup-and-tooling/13-python-for-ai-engineering/outputs/prompt-python-review.md).
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
