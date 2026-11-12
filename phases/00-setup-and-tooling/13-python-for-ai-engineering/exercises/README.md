@@ -50,4 +50,26 @@ Use the prompt in `outputs/prompt-python-review.md` to review a Python file for 
 
 ## Completion record
 
-Record the actual command output and mark each exercise complete only after you have run and checked it.
+**Date:** 2026-11-12  
+**Status:** All 7 exercises completed and verified.
+
+| Exercise | Result | Evidence |
+|---|---|---|
+| 1. Run the toolkit | Complete | Python 3.12.3; CSV/JSON round-trip correct; 80 training and 20 test records; zero split overlap; batch sizes of 16; numerical, timing, and memory demonstrations ran. |
+| 2. Run the tests | Complete | Initial suite: 14 tests passed. After adding benchmark validation coverage: 15 tests passed. |
+| 3. Reproducible split | Complete | Same seed reproduced both splits; a different seed produced a different test split. |
+| 4. Generator and batching | Complete | Confirmed generator values 1, 2, 3 and `StopIteration` after exhaustion. Toolkit tests also verified batching behavior. |
+| 5. Mutable default argument | Complete | Demonstrated shared-list behavior, then fixed it with a `None` default and a fresh list per call. |
+| 6. Training-only standardization | Complete | Fitted the transformation on training rows and applied it unchanged to test data. |
+| 7. Review a Python file | Complete | Reviewed `code/main.py` with `outputs/prompt-python-review.md`; added positive-repeat validation to `best_time()` and a regression test. |
+
+**Final verification command:**
+
+```bash
+python3 -m unittest discover -s phases/00-setup-and-tooling/13-python-for-ai-engineering/code/tests -v
+```
+
+**Final result:** 15 tests passed. The user confirmed the test run passed.
+
+**Review follow-up:** The review also suggested explicit record-shape and CSV/JSON required-field validation. Those additional suggestions remain potential improvements and are not recorded as implemented.
+
