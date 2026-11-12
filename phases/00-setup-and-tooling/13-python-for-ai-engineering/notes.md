@@ -190,3 +190,21 @@ Vectorization means expressing an operation over an entire array instead of writ
 5. Keep training and test data separate.
 6. Fit preprocessing statistics on training data only.
 7. Use generators to reduce memory use and NumPy for large numerical operations.
+
+## Lesson 13 completion record
+
+**Date:** 2026-11-12  
+**Quiz:** 6/6 (100%) — passed. All six questions were answered correctly.
+
+**Practical work:** Completed all seven exercises:
+1. Ran the Python toolkit with Python 3.12.3. CSV/JSON round-trips succeeded, the 80/20 split had no overlap, mini-batches were created, and the numerical demonstrations ran.
+2. Ran the original unit-test suite: 14 tests passed.
+3. Verified that the same random seed produces identical training and test splits, while a different seed produces a different split.
+4. Used `next()` to consume a generator and observed `StopIteration` after its final value.
+5. Demonstrated that a mutable list default is shared between calls, then corrected the function by using `None` and creating a fresh list.
+6. Fitted standardization statistics on training rows only and reused the resulting transformation on test data. The standardized training feature values had means approximately zero.
+7. Reviewed `code/main.py` with `outputs/prompt-python-review.md`. The review confirmed the use of a local seeded random generator, safe file contexts and UTF-8, strict vector-length checking, training-only standardization, and generator-based memory comparison. It also identified opportunities for stricter record/column validation and repeat-count validation in the timing helper.
+
+**Code improvement:** Added a positive-repeat validation to `best_time()` and a unit test confirming that `repeats=0` raises `ValueError`. The final local test run passed all 15 tests.
+
+**Review note:** The additional record-shape and file-column validation suggestions were identified but were not implemented as part of this lesson's requested change.
