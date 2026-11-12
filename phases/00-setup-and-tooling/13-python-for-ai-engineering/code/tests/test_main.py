@@ -8,6 +8,7 @@ sys.path.insert(0, str(CODE_DIR))
 from main import (  # noqa: E402
     Record,
     batches,
+    best_time,
     dot,
     fit_standardizer,
     load_records,
@@ -79,6 +80,10 @@ class NumericTests(unittest.TestCase):
     def test_constant_feature_does_not_divide_by_zero(self):
         transform = fit_standardizer([(2.0, 1.0), (2.0, 3.0)])
         self.assertEqual(transform((2.0, 2.0)), [0.0, 0.0])
+
+    def test_best_time_rejects_nonpositive_repeats(self):
+        with self.assertRaises(ValueError):
+            best_time(sum, [1, 2, 3], repeats=0)
 
 
 class RecordTests(unittest.TestCase):
