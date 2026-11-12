@@ -123,6 +123,9 @@ def dot(a: Sequence[float], b: Sequence[float]) -> float:
 
 
 def best_time(function, *args, repeats: int = 5) -> float:
+    if repeats < 1:
+        raise ValueError("repeats must be at least 1")
+
     measurements = []
     for _ in range(repeats):
         start = time.perf_counter()
