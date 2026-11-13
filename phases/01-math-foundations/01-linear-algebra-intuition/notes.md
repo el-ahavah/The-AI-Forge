@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–3 understood. The magnitude, vector-operations, and scalar-multiplication Python files were run successfully in my local environment.
+**Status:** Segments 1–4 understood. The magnitude, vector-operations, and scalar-multiplication Python files were run successfully in my local environment.
 
 ### 1. What is a vector?
 
@@ -234,11 +234,82 @@ All three outputs matched the expected calculations.
 - **Understanding checks:** All three answers were correct.
 - **Python implementation:** Ran locally with the expected output.
 
+## Segment 4 — Dot product
+
+**Status:** Understanding checks completed successfully. The Python implementation ran locally and produced the expected positive, negative, and zero results.
+
+### 1. What is the dot product?
+
+The dot product combines two vectors into one number (a scalar). Multiply the components in matching positions, then add those products.
+
+For two 2D vectors:
+
+`A · B = (a1 × b1) + (a2 × b2)`
+
+Example:
+
+`A = [2, 3]` and `B = [4, 1]`
+
+```text
+(2 × 4) + (3 × 1)
+= 8 + 3
+= 11
+```
+
+### 2. What the result tells us about direction
+
+For two nonzero vectors:
+- A positive dot product means the angle between them is less than 90 degrees; they point generally in the same direction.
+- A negative dot product means the angle is greater than 90 degrees; they point generally in opposite directions.
+- A zero dot product means they are perpendicular (90 degrees apart).
+
+A negative result does not always mean the vectors are exact reverses. In the example `[2, 3]` and `[-2, -3]`, they are exact opposites because one is the negative of the other.
+
+### 3. Python implementation
+
+The practical function is in [code/dot_product.py](code/dot_product.py).
+
+- `vector_a[0] * vector_b[0]` multiplies the first components.
+- `vector_a[1] * vector_b[1]` multiplies the second components.
+- The function adds both products and returns one number.
+
+### 4. Local execution evidence
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/dot_product.py
+```
+
+The program printed:
+
+```text
+Positive dot product: 11
+Negative dot product: -13
+Zero dot product: 0
+```
+
+All three results matched the expected calculations.
+
+### 5. What I learned
+
+- The dot product multiplies matching components and adds the products.
+- Its result is a scalar, not a vector.
+- The sign of the dot product tells us whether the angle is acute, obtuse, or (for a zero result) right.
+- A zero dot product means perpendicular vectors when both vectors are nonzero.
+
+### 6. Segment 4 checkpoint
+
+- **Understanding checks:** Correctly calculated positive (23), negative (-13), and zero (0) dot products and identified the perpendicular relationship in the zero-result example.
+- **Python implementation:** Ran locally with all three expected outputs.
+- **Official lesson practical and post-lesson quiz:** Not yet completed.
+
 ### 7. Overall lesson checkpoint
 
 - **Pre-lesson quiz:** 0/2. This was a starting-point check, not a final score.
 - **Segment 1:** Understanding checks completed successfully after explanations and corrections.
 - **Segment 2:** Understanding checks completed successfully; vector addition and subtraction ran locally.
 - **Segment 3:** Understanding checks completed successfully; scalar multiplication ran locally with outputs `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
+- **Segment 4:** Dot product understanding checks completed successfully; `dot_product.py` ran locally with outputs `11`, `-13`, and `0`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 - **Next:** Continue with the remaining concepts in the official lesson after the required practical and quiz work.
