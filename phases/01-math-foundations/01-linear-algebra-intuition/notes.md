@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1 and 2 understood. Both the magnitude and vector-operations Python files were run successfully in my local environment.
+**Status:** Segments 1–3 understood. The magnitude, vector-operations, and scalar-multiplication Python files were run successfully in my local environment.
 
 ### 1. What is a vector?
 
@@ -174,9 +174,71 @@ Both results matched the expected calculations.
 - **Python implementation:** Both functions ran locally with the expected output.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 
+## Segment 3 — Scalar multiplication
+
+**Status:** Understanding checks completed successfully. The Python implementation ran locally and produced the expected results.
+
+### 1. What is scalar multiplication?
+
+A scalar is a single number. Scalar multiplication means multiplying every component of a vector by that number.
+
+For example, if:
+
+`A = (4, 5)`
+
+Then:
+
+- `2A = (2 × 4, 2 × 5) = (8, 10)`
+- `3A = (3 × 4, 3 × 5) = (12, 15)`
+- `-1A = (-1 × 4, -1 × 5) = (-4, -5)`
+
+A positive scalar changes the vector's length while keeping its direction. A negative scalar also reverses its direction.
+
+### 2. Python implementation
+
+The practical function is in [code/vector_scalar_multiplication.py](code/vector_scalar_multiplication.py).
+
+- `vector` receives the vector.
+- `scalar` receives the number to multiply by.
+- `vector[0] * scalar` multiplies the first component.
+- `vector[1] * scalar` multiplies the second component.
+- The function returns both results as a new list.
+
+### 3. Local execution evidence
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_scalar_multiplication.py
+```
+
+The program printed:
+
+```text
+[8, 10]
+[12, 15]
+[-4, -5]
+```
+
+All three outputs matched the expected calculations.
+
+### 4. What I learned
+
+- A scalar is one number.
+- Scalar multiplication applies the same scalar to every component of a vector.
+- A positive scalar keeps the direction; a negative scalar reverses it.
+- Each vector component is multiplied separately, and the results together form the new vector.
+
+### 5. Segment 3 checkpoint
+
+- **Understanding checks:** All three answers were correct.
+- **Python implementation:** Ran locally with the expected output.
+
 ### 7. Overall lesson checkpoint
 
 - **Pre-lesson quiz:** 0/2. This was a starting-point check, not a final score.
 - **Segment 1:** Understanding checks completed successfully after explanations and corrections.
+- **Segment 2:** Understanding checks completed successfully; vector addition and subtraction ran locally.
+- **Segment 3:** Understanding checks completed successfully; scalar multiplication ran locally with outputs `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 - **Next:** Continue with the remaining concepts in the official lesson after the required practical and quiz work.
