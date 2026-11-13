@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segment understood. The Python function was run successfully in my local environment and produced the three expected results.
+**Status:** Segments 1 and 2 understood. Both the magnitude and vector-operations Python files were run successfully in my local environment.
 
 ### 1. What is a vector?
 
@@ -103,6 +103,76 @@ I first gave `5.29` for the magnitude of `[6, 8]`. Working through the formula s
 `√(6² + 8²) = √100 = 10`
 
 This reminded me to square both components, add the results, and only then find the square root.
+
+## Segment 2 — Vector addition and subtraction
+
+**Status:** Understanding confirmed. The Python implementation was run successfully in my local environment.
+
+### 1. Vector addition
+
+To add two vectors, add the components in matching positions.
+
+Example:
+
+`A = (6, 5)` and `B = (2, 3)`
+
+```text
+A + B = (6 + 2, 5 + 3)
+      = (8, 8)
+```
+
+### 2. Vector subtraction
+
+To subtract two vectors, subtract the second vector's components from the matching components of the first vector.
+
+```text
+A - B = (6 - 2, 5 - 3)
+      = (4, 2)
+```
+
+A negative component is valid. For example, `(8, 4) - (5, 6) = (3, -2)`.
+
+### 3. Python implementation
+
+The practical function is in [code/vector_operations.py](code/vector_operations.py).
+
+- `vector_a` and `vector_b` are parameters that receive the two input vectors.
+- Python list indexing starts at zero: `vector_a[0]` accesses the first component and `vector_a[1]` accesses the second.
+- The function adds or subtracts corresponding components and places the results in a new list.
+- `return` sends that result back to the place where the function was called, so it can be stored or reused.
+
+For example, `add_vectors([10, 4], [3, 8])` returns `[13, 12]`.
+
+### 4. Local execution evidence
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_operations.py
+```
+
+The program printed:
+
+```text
+Addition: [8, 8]
+Subtraction: [4, 2]
+```
+
+Both results matched the expected calculations.
+
+### 5. What I learned
+
+- Addition combines corresponding components.
+- Subtraction subtracts corresponding components.
+- `[0]` means the first list element; `[1]` means the second.
+- Function parameters receive the values supplied when a function is called.
+- `return` makes a function's result available for later use.
+
+### 6. Learning checkpoint
+
+- **Segment 2:** Understanding checks completed successfully.
+- **Python implementation:** Both functions ran locally with the expected output.
+- **Official lesson practical and post-lesson quiz:** Not yet completed.
 
 ### 8. Learning checkpoint
 
