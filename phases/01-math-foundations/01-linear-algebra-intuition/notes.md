@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segment understood. The sample Python function has been checked with three inputs. Local execution in my own workspace is still to be confirmed.
+**Status:** Segment understood. The Python function was run successfully in my local environment and produced the three expected results.
 
 ### 1. What is a vector?
 
@@ -85,7 +85,7 @@ The function was checked with these sample inputs in a Python execution environm
 | `[6, 8]` | 10 | 10.0 |
 | `[5, 12]` | 13 | 13.0 |
 
-I still need to run the file in my own local project workspace.
+I ran the file successfully in my own local project workspace. It printed `5.0`, `10.0`, and `13.0`, matching the expected results.
 
 ### 6. What I learned
 
