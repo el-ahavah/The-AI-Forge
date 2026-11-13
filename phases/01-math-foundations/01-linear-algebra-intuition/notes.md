@@ -168,15 +168,15 @@ Both results matched the expected calculations.
 - Function parameters receive the values supplied when a function is called.
 - `return` makes a function's result available for later use.
 
-### 6. Learning checkpoint
+### 6. Segment 2 checkpoint
 
 - **Segment 2:** Understanding checks completed successfully.
 - **Python implementation:** Both functions ran locally with the expected output.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 
-### 8. Learning checkpoint
+### 7. Overall lesson checkpoint
 
 - **Pre-lesson quiz:** 0/2. This was a starting-point check, not a final score.
 - **Segment 1:** Understanding checks completed successfully after explanations and corrections.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
-- **Next:** Run `code/vector_magnitude.py` locally, then continue to vector addition and subtraction when ready.
+- **Next:** Continue with the remaining concepts in the official lesson after the required practical and quiz work.
