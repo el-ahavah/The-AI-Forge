@@ -313,3 +313,92 @@ All three results matched the expected calculations.
 - **Segment 4:** Dot product understanding checks completed successfully; `dot_product.py` ran locally with outputs `11`, `-13`, and `0`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 - **Next:** Continue with the remaining concepts in the official lesson after the required practical and quiz work.
+
+
+## Segment 5 — Vector normalization
+
+**Status:** Conceptual understanding confirmed. No separate Python practical has been created or run for this segment yet.
+
+### 1. What is normalization?
+
+Normalization changes a vector's length to 1 while keeping its direction the same. A vector with length 1 is called a **unit vector**.
+
+To normalize a vector, divide every component by the vector's magnitude.
+
+### 2. Example
+
+For the vector `[6, 8]`:
+
+```text
+Magnitude = √(6² + 8²) = √100 = 10
+
+Normalized vector = [6 ÷ 10, 8 ÷ 10]
+                  = [0.6, 0.8]
+```
+
+The new vector points in the same direction, but its length is 1.
+
+### 3. Why it matters in AI
+
+Normalizing embedding vectors can make comparisons focus on direction rather than differences in vector length. This is useful in similarity-based tasks such as semantic search.
+
+### 4. Segment 5 checkpoint
+
+- **Understanding check:** Correctly normalized `[6, 8]` to `[0.6, 0.8]`.
+- **Python practical:** Not yet implemented or run.
+- **Official lesson practical and post-lesson quiz:** Still pending.
+
+## Segment 6 — Cosine similarity
+
+**Status:** Conceptual understanding confirmed. No separate Python practical has been created or run for this segment yet.
+
+### 1. What does cosine similarity measure?
+
+Cosine similarity measures how closely two nonzero vectors point in the same direction. It focuses on direction rather than the vectors' lengths.
+
+Its value ranges from -1 to 1:
+
+- `1`: same direction.
+- `0`: perpendicular directions.
+- `-1`: opposite directions.
+
+### 2. Formula
+
+```text
+cosine similarity = (A · B) / (|A| × |B|)
+```
+
+This means: divide the dot product by the product of the two vector magnitudes.
+
+### 3. Example
+
+For `A = [1, 0]` and `B = [2, 0]`:
+
+```text
+Dot product = (1 × 2) + (0 × 0) = 2
+Magnitude of A = 1
+Magnitude of B = 2
+
+Cosine similarity = 2 / (1 × 2) = 1
+```
+
+The result is 1 because both vectors point in exactly the same direction, even though their lengths are different.
+
+### 4. Why it matters in AI
+
+Cosine similarity is commonly used to compare embedding vectors, for example when searching for text or items with related meanings. It helps compare their directions without letting vector length directly determine the similarity score.
+
+### 5. Segment 6 checkpoint
+
+- **Understanding check:** Correctly calculated a cosine similarity of `1` for `[1, 0]` and `[2, 0]`.
+- **Python practical:** Not yet implemented or run.
+- **Official lesson practical and post-lesson quiz:** Still pending.
+
+## Updated lesson checkpoint
+
+- **Pre-lesson quiz:** 0/2 (baseline check).
+- **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
+- **Segment 5:** Normalization understood; Python practical not yet implemented.
+- **Segment 6:** Cosine similarity understood; Python practical not yet implemented.
+- **Next concept:** Angles between vectors (Segment 7).
+- **Official lesson practical and post-lesson quiz:** Not yet completed.
