@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–4 understood. The magnitude, vector-operations, and scalar-multiplication Python files were run successfully in my local environment.
+**Status:** Segments 1–6 understood through guided explanations and checks. The magnitude, vector-operations, scalar-multiplication, and dot-product Python files were run successfully in my local environment. Segment 5's normalization file has been created and is waiting for local execution; Segment 6's cosine-similarity practical is being added.
 
 ### 1. What is a vector?
 
