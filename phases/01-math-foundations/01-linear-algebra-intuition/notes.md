@@ -351,15 +351,32 @@ The practical is in [code/vector_normalization.py](code/vector_normalization.py)
 - The function returns a new list, leaving the original vector unchanged.
 - A zero vector has magnitude 0, so division would be impossible. The function raises a clear `ValueError` for that case.
 
-### 5. Segment 5 checkpoint
+### 5. Local execution evidence
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_normalization.py
+```
+
+The program printed:
+
+```text
+Original vector: [6, 8]
+Normalized vector: [0.6, 0.8]
+```
+
+The output matched the expected normalized vector.
+
+### 6. Segment 5 checkpoint
 
 - **Understanding check:** Correctly normalized `[6, 8]` to `[0.6, 0.8]`.
-- **Python practical:** Created and committed; waiting for local execution and output confirmation.
+- **Python practical:** Ran locally and produced the expected output.
 - **Official lesson practical and post-lesson quiz:** Still pending.
 
 ## Segment 6 — Cosine similarity
 
-**Status:** Conceptual understanding confirmed. The Python practical has been created and committed; local execution is pending.
+**Status:** Conceptual understanding confirmed. The Python practical was run locally and produced the expected output.
 
 ### 1. What does cosine similarity measure?
 
@@ -406,10 +423,28 @@ The practical is in [code/cosine_similarity.py](code/cosine_similarity.py).
 - It divides the dot product by the product of the magnitudes.
 - A zero vector cannot be used because its magnitude would make the denominator zero. The function raises a clear `ValueError` in that case.
 
-### 6. Segment 6 checkpoint
+### 6. Local execution evidence
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/cosine_similarity.py
+```
+
+The program printed:
+
+```text
+Same direction: 1.0
+Perpendicular: 0.0
+Opposite directions: -1.0
+```
+
+All three results matched the expected cosine similarity values.
+
+### 7. Segment 6 checkpoint
 
 - **Understanding check:** Correctly calculated a cosine similarity of `1` for `[1, 0]` and `[2, 0]`.
-- **Python practical:** Created and committed; waiting for local execution and output confirmation.
+- **Python practical:** Ran locally and produced the expected outputs for same, perpendicular, and opposite directions.
 - **Official lesson practical and post-lesson quiz:** Still pending.
 
 ## Updated lesson checkpoint
