@@ -317,7 +317,7 @@ All three results matched the expected calculations.
 
 ## Segment 5 — Vector normalization
 
-**Status:** Conceptual understanding confirmed. No separate Python practical has been created or run for this segment yet.
+**Status:** Conceptual understanding confirmed. The Python practical has been created; local execution is pending.
 
 ### 1. What is normalization?
 
@@ -342,10 +342,19 @@ The new vector points in the same direction, but its length is 1.
 
 Normalizing embedding vectors can make comparisons focus on direction rather than differences in vector length. This is useful in similarity-based tasks such as semantic search.
 
-### 4. Segment 5 checkpoint
+### 4. Python implementation
+
+The practical is in [code/vector_normalization.py](code/vector_normalization.py).
+
+- `hypot(x, y)` calculates the vector's magnitude.
+- Each component is divided by that magnitude.
+- The function returns a new list, leaving the original vector unchanged.
+- A zero vector has magnitude 0, so division would be impossible. The function raises a clear `ValueError` for that case.
+
+### 5. Segment 5 checkpoint
 
 - **Understanding check:** Correctly normalized `[6, 8]` to `[0.6, 0.8]`.
-- **Python practical:** Not yet implemented or run.
+- **Python practical:** Created and committed; waiting for local execution and output confirmation.
 - **Official lesson practical and post-lesson quiz:** Still pending.
 
 ## Segment 6 — Cosine similarity
@@ -398,7 +407,7 @@ Cosine similarity is commonly used to compare embedding vectors, for example whe
 
 - **Pre-lesson quiz:** 0/2 (baseline check).
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
-- **Segment 5:** Normalization understood; Python practical not yet implemented.
+- **Segment 5:** Normalization understood; `vector_normalization.py` created and committed, awaiting local execution.
 - **Segment 6:** Cosine similarity understood; Python practical not yet implemented.
 - **Next concept:** Angles between vectors (Segment 7).
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
