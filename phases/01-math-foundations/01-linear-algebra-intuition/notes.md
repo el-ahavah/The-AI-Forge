@@ -359,7 +359,7 @@ The practical is in [code/vector_normalization.py](code/vector_normalization.py)
 
 ## Segment 6 — Cosine similarity
 
-**Status:** Conceptual understanding confirmed. No separate Python practical has been created or run for this segment yet.
+**Status:** Conceptual understanding confirmed. The Python practical has been created and committed; local execution is pending.
 
 ### 1. What does cosine similarity measure?
 
@@ -397,10 +397,19 @@ The result is 1 because both vectors point in exactly the same direction, even t
 
 Cosine similarity is commonly used to compare embedding vectors, for example when searching for text or items with related meanings. It helps compare their directions without letting vector length directly determine the similarity score.
 
-### 5. Segment 6 checkpoint
+### 5. Python implementation
+
+The practical is in [code/cosine_similarity.py](code/cosine_similarity.py).
+
+- The function calculates the dot product of the two vectors.
+- `hypot()` calculates each vector's magnitude.
+- It divides the dot product by the product of the magnitudes.
+- A zero vector cannot be used because its magnitude would make the denominator zero. The function raises a clear `ValueError` in that case.
+
+### 6. Segment 6 checkpoint
 
 - **Understanding check:** Correctly calculated a cosine similarity of `1` for `[1, 0]` and `[2, 0]`.
-- **Python practical:** Not yet implemented or run.
+- **Python practical:** Created and committed; waiting for local execution and output confirmation.
 - **Official lesson practical and post-lesson quiz:** Still pending.
 
 ## Updated lesson checkpoint
@@ -408,6 +417,6 @@ Cosine similarity is commonly used to compare embedding vectors, for example whe
 - **Pre-lesson quiz:** 0/2 (baseline check).
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
 - **Segment 5:** Normalization understood; `vector_normalization.py` created and committed, awaiting local execution.
-- **Segment 6:** Cosine similarity understood; Python practical not yet implemented.
+- **Segment 6:** Cosine similarity understood; `cosine_similarity.py` created and committed, awaiting local execution.
 - **Next concept:** Angles between vectors (Segment 7).
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
