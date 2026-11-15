@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–6 understood through guided explanations and checks. The magnitude, vector-operations, scalar-multiplication, and dot-product Python files were run successfully in my local environment. Segment 5's normalization file has been created and is waiting for local execution; Segment 6's cosine-similarity practical is being added.
+**Status:** Segments 1–8 covered through guided explanations and checks. The practical files for Segments 1–6 have been run locally with expected outputs. Segment 7 (angles between vectors) and Segment 8 (matrix transformations) practical files have been created and committed; local execution is pending.
 
 ### 1. What is a vector?
 
@@ -451,7 +451,125 @@ All three results matched the expected cosine similarity values.
 
 - **Pre-lesson quiz:** 0/2 (baseline check).
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
-- **Segment 5:** Normalization understood; `vector_normalization.py` created and committed, awaiting local execution.
-- **Segment 6:** Cosine similarity understood; `cosine_similarity.py` created and committed, awaiting local execution.
-- **Next concept:** Angles between vectors (Segment 7).
+- **Segment 5:** Normalization understood; `vector_normalization.py` ran locally and produced `[0.6, 0.8]`.
+- **Segment 6:** Cosine similarity understood; `cosine_similarity.py` ran locally and produced `1.0`, `0.0`, and `-1.0`.
+- **Segment 7:** Angles between vectors covered; `code/angle_between_vectors.py` created and committed. Local execution is pending.
+- **Segment 8:** Matrix-vector multiplication and scaling covered; `code/matrix_vector_multiplication.py` created and committed. Local execution is pending.
+- **Official lesson practical and post-lesson quiz:** Not yet completed.
+
+
+## Segment 7 — Angles between vectors
+
+**Status:** The concept has been introduced and the Python practical has been created and committed. Local execution is pending.
+
+### 1. What is the angle between vectors?
+
+The angle between two nonzero vectors describes how far apart their directions are.
+
+- **0°:** They point in the same direction.
+- **90°:** They are perpendicular.
+- **180°:** They point in opposite directions.
+
+### 2. How do we calculate the angle?
+
+We use the dot product and the magnitudes of both vectors:
+
+```text
+cos(angle) = (A · B) / (|A| × |B|)
+angle = arccos(cos(angle))
+```
+
+The inverse cosine (`acos`) gives an angle in radians; Python's `degrees()` converts it to degrees.
+
+For example, `A = [1, 0]` and `B = [0, 1]` have a dot product of 0, so their angle is 90°.
+
+### 3. Python implementation
+
+The practical is in [code/angle_between_vectors.py](code/angle_between_vectors.py).
+
+- The function checks that both vectors have the same number of components.
+- It calculates their dot product and magnitudes.
+- It divides the dot product by the product of the magnitudes.
+- It clamps the cosine value to the range -1 to 1 to protect against small floating-point rounding errors.
+- `acos()` and `degrees()` convert that value into an angle in degrees.
+- A zero vector is rejected because its angle is undefined.
+
+### 4. Local execution
+
+Local execution is pending. After pulling the latest changes, run:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/angle_between_vectors.py
+```
+
+Expected results are 0° for the same direction, 90° for perpendicular vectors, and 180° for opposite directions. These are expected values, not yet recorded as a local run.
+
+### 5. Segment 7 checkpoint
+
+- **Understanding check:** Correctly identified 0° for vectors pointing in the same direction. The opposite-direction check is part of the guided lesson.
+- **Python practical:** Created and committed; local run pending.
+
+## Segment 8 — Matrix transformations and scaling
+
+**Status:** The Python practical has been created and committed. Local execution is pending.
+
+### 1. What is a matrix transformation?
+
+A matrix is a rectangular arrangement of numbers. When we multiply a matrix by a vector, the matrix transforms that vector into a new vector.
+
+A transformation can stretch, shrink, rotate, or otherwise change a vector.
+
+### 2. Scaling with a matrix
+
+To double the x-coordinate and triple the y-coordinate, use this matrix:
+
+```text
+[2  0]
+[0  3]
+```
+
+Apply it to `[1, 1]`:
+
+```text
+[2  0]   [1]   [2×1 + 0×1]   [2]
+[0  3] × [1] = [0×1 + 3×1] = [3]
+```
+
+The transformed vector is `[2, 3]`.
+
+The diagonal values control the scaling of each coordinate. The zeros mean the x-coordinate does not contribute to the new y-coordinate, and the y-coordinate does not contribute to the new x-coordinate.
+
+### 3. Python implementation
+
+The practical is in [code/matrix_vector_multiplication.py](code/matrix_vector_multiplication.py).
+
+- The function checks that the matrix is not empty.
+- It checks that all rows have the same number of columns.
+- It checks that the vector length matches the number of matrix columns.
+- For each row, it multiplies each matrix value by the matching vector component and adds the products.
+- The results form the transformed vector.
+
+### 4. Local execution
+
+Local execution is pending. After pulling the latest changes, run:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/matrix_vector_multiplication.py
+```
+
+The expected transformed vector is `[2, 3]`. This is an expected result, not yet recorded as a local run.
+
+### 5. Segment 8 checkpoint
+
+- **Matrix transformation:** The idea of applying a matrix to change a vector has been introduced.
+- **Python practical:** Created and committed; local run pending.
+
+## Updated lesson checkpoint
+
+- **Pre-lesson quiz:** 0/2 (baseline check).
+- **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
+- **Segment 5:** Normalization practical ran locally and produced `[0.6, 0.8]`.
+- **Segment 6:** Cosine similarity practical ran locally and produced `1.0`, `0.0`, and `-1.0`.
+- **Segment 7:** Angle-between-vectors practical created and committed; local run pending.
+- **Segment 8:** Matrix-vector multiplication/scaling practical created and committed; local run pending.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
