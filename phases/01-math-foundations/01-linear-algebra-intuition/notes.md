@@ -64,7 +64,7 @@ Another example:
 
 ### 4. Python implementation
 
-The practical function is in [code/vector_magnitude.py](code/vector_magnitude.py).
+The practical function is in [code/1_vector_magnitude.py](code/1_vector_magnitude.py).
 
 The important Python parts are:
 
@@ -134,7 +134,7 @@ A negative component is valid. For example, `(8, 4) - (5, 6) = (3, -2)`.
 
 ### 3. Python implementation
 
-The practical function is in [code/vector_operations.py](code/vector_operations.py).
+The practical function is in [code/2_vector_operations.py](code/2_vector_operations.py).
 
 - `vector_a` and `vector_b` are parameters that receive the two input vectors.
 - Python list indexing starts at zero: `vector_a[0]` accesses the first component and `vector_a[1]` accesses the second.
@@ -148,7 +148,7 @@ For example, `add_vectors([10, 4], [3, 8])` returns `[13, 12]`.
 I ran:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_operations.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/2_vector_operations.py
 ```
 
 The program printed:
@@ -196,7 +196,7 @@ A positive scalar changes the vector's length while keeping its direction. A neg
 
 ### 2. Python implementation
 
-The practical function is in [code/vector_scalar_multiplication.py](code/vector_scalar_multiplication.py).
+The practical function is in [code/3_vector_scalar_multiplication.py](code/3_vector_scalar_multiplication.py).
 
 - `vector` receives the vector.
 - `scalar` receives the number to multiply by.
@@ -209,7 +209,7 @@ The practical function is in [code/vector_scalar_multiplication.py](code/vector_
 I ran:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_scalar_multiplication.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/3_vector_scalar_multiplication.py
 ```
 
 The program printed:
@@ -267,7 +267,7 @@ A negative result does not always mean the vectors are exact reverses. In the ex
 
 ### 3. Python implementation
 
-The practical function is in [code/dot_product.py](code/dot_product.py).
+The practical function is in [code/4_dot_product.py](code/4_dot_product.py).
 
 - `vector_a[0] * vector_b[0]` multiplies the first components.
 - `vector_a[1] * vector_b[1]` multiplies the second components.
@@ -278,7 +278,7 @@ The practical function is in [code/dot_product.py](code/dot_product.py).
 I ran:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/dot_product.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/4_dot_product.py
 ```
 
 The program printed:
@@ -310,7 +310,7 @@ All three results matched the expected calculations.
 - **Segment 1:** Understanding checks completed successfully after explanations and corrections.
 - **Segment 2:** Understanding checks completed successfully; vector addition and subtraction ran locally.
 - **Segment 3:** Understanding checks completed successfully; scalar multiplication ran locally with outputs `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
-- **Segment 4:** Dot product understanding checks completed successfully; `dot_product.py` ran locally with outputs `11`, `-13`, and `0`.
+- **Segment 4:** Dot product understanding checks completed successfully; `4_dot_product.py` ran locally with outputs `11`, `-13`, and `0`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 - **Next:** Continue with the remaining concepts in the official lesson after the required practical and quiz work.
 
@@ -344,7 +344,7 @@ Normalizing embedding vectors can make comparisons focus on direction rather tha
 
 ### 4. Python implementation
 
-The practical is in [code/vector_normalization.py](code/vector_normalization.py).
+The practical is in [code/5_vector_normalization.py](code/5_vector_normalization.py).
 
 - `hypot(x, y)` calculates the vector's magnitude.
 - Each component is divided by that magnitude.
@@ -356,7 +356,7 @@ The practical is in [code/vector_normalization.py](code/vector_normalization.py)
 I ran:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vector_normalization.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/5_vector_normalization.py
 ```
 
 The program printed:
@@ -416,7 +416,7 @@ Cosine similarity is commonly used to compare embedding vectors, for example whe
 
 ### 5. Python implementation
 
-The practical is in [code/cosine_similarity.py](code/cosine_similarity.py).
+The practical is in [code/6_cosine_similarity.py](code/6_cosine_similarity.py).
 
 - The function calculates the dot product of the two vectors.
 - `hypot()` calculates each vector's magnitude.
@@ -428,7 +428,7 @@ The practical is in [code/cosine_similarity.py](code/cosine_similarity.py).
 I ran:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/cosine_similarity.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/6_cosine_similarity.py
 ```
 
 The program printed:
@@ -451,10 +451,10 @@ All three results matched the expected cosine similarity values.
 
 - **Pre-lesson quiz:** 0/2 (baseline check).
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
-- **Segment 5:** Normalization understood; `vector_normalization.py` ran locally and produced `[0.6, 0.8]`.
-- **Segment 6:** Cosine similarity understood; `cosine_similarity.py` ran locally and produced `1.0`, `0.0`, and `-1.0`.
-- **Segment 7:** Angles between vectors covered; `code/angle_between_vectors.py` created and committed. Local execution is pending.
-- **Segment 8:** Matrix-vector multiplication and scaling covered; `code/matrix_vector_multiplication.py` created and committed. Local execution is pending.
+- **Segment 5:** Normalization understood; `5_vector_normalization.py` ran locally and produced `[0.6, 0.8]`.
+- **Segment 6:** Cosine similarity understood; `6_cosine_similarity.py` ran locally and produced `1.0`, `0.0`, and `-1.0`.
+- **Segment 7:** Angles between vectors covered; `code/7_angle_between_vectors.py` created and committed. Local execution is pending.
+- **Segment 8:** Matrix-vector multiplication and scaling covered; `code/8_matrix_vector_multiplication.py` created and committed. Local execution is pending.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
 
 
@@ -485,7 +485,7 @@ For example, `A = [1, 0]` and `B = [0, 1]` have a dot product of 0, so their ang
 
 ### 3. Python implementation
 
-The practical is in [code/angle_between_vectors.py](code/angle_between_vectors.py).
+The practical is in [code/7_angle_between_vectors.py](code/7_angle_between_vectors.py).
 
 - The function checks that both vectors have the same number of components.
 - It calculates their dot product and magnitudes.
@@ -499,7 +499,7 @@ The practical is in [code/angle_between_vectors.py](code/angle_between_vectors.p
 Local execution is pending. After pulling the latest changes, run:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/angle_between_vectors.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/7_angle_between_vectors.py
 ```
 
 I ran the file locally. It printed `Same direction: 0.0 degrees`, `Perpendicular: 90.0 degrees`, and `Opposite direction: 180.0 degrees`. All three outputs matched the expected angles.
@@ -541,7 +541,7 @@ The diagonal values control the scaling of each coordinate. The zeros mean the x
 
 ### 3. Python implementation
 
-The practical is in [code/matrix_vector_multiplication.py](code/matrix_vector_multiplication.py).
+The practical is in [code/8_matrix_vector_multiplication.py](code/8_matrix_vector_multiplication.py).
 
 - The function checks that the matrix is not empty.
 - It checks that all rows have the same number of columns.
@@ -554,7 +554,7 @@ The practical is in [code/matrix_vector_multiplication.py](code/matrix_vector_mu
 Local execution is pending. After pulling the latest changes, run:
 
 ```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/matrix_vector_multiplication.py
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/8_matrix_vector_multiplication.py
 ```
 
 I ran the file locally. It printed the original vector `[1, 1]`, the scaling matrix `[[2, 0], [0, 3]]`, and the transformed vector `[2, 3]`. The output matched the expected matrix transformation.
@@ -570,6 +570,6 @@ I ran the file locally. It printed the original vector `[1, 1]`, the scaling mat
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
 - **Segment 5:** Normalization practical ran locally and produced `[0.6, 0.8]`.
 - **Segment 6:** Cosine similarity practical ran locally and produced `1.0`, `0.0`, and `-1.0`.
-- **Segment 7:** `angle_between_vectors.py` ran locally and returned 0.0°, 90.0°, and 180.0° for same, perpendicular, and opposite directions.
-- **Segment 8:** `matrix_vector_multiplication.py` ran locally and transformed `[1, 1]` into `[2, 3]`.
+- **Segment 7:** `7_angle_between_vectors.py` ran locally and returned 0.0°, 90.0°, and 180.0° for same, perpendicular, and opposite directions.
+- **Segment 8:** `8_matrix_vector_multiplication.py` ran locally and transformed `[1, 1]` into `[2, 3]`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
