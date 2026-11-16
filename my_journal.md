@@ -363,6 +363,32 @@ Overall, three practical exercises are complete, one is partially complete, and 
 
 **Artifacts:** [Lesson notes](phases/00-setup-and-tooling/13-python-for-ai-engineering/notes.md), [exercise guide](phases/00-setup-and-tooling/13-python-for-ai-engineering/exercises/README.md), [toolkit](phases/00-setup-and-tooling/13-python-for-ai-engineering/code/main.py), [unit tests](phases/00-setup-and-tooling/13-python-for-ai-engineering/code/tests/test_main.py), and [code-review prompt](phases/00-setup-and-tooling/13-python-for-ai-engineering/outputs/prompt-python-review.md).
 
+## Phase 1 · Lesson 1: Linear Algebra Intuition
+
+**Started:** 2026-11-13  
+**Current progress:** Segments 1–8 covered through guided explanations and understanding checks.  
+**Pre-lesson quiz:** 0/2 (baseline check, not the final lesson quiz).  
+**Official lesson practical and post-lesson quiz:** Pending.
+
+**Main idea in my own words:** A vector is a list of numbers that can represent a direction and a size. I learned how to measure its length (magnitude), add and subtract vectors, multiply a vector by a scalar, and calculate the dot product. I then learned normalization, which changes a vector's length to 1 without changing its direction, and cosine similarity, which compares the directions of two nonzero vectors. The angle between vectors tells me how their directions relate: 0° means the same direction, 90° means perpendicular, and 180° means opposite directions. A matrix can transform a vector; for example, a scaling matrix can change the x- and y-coordinates by different amounts.
+
+**Examples and local execution evidence:**
+
+- **Segment 1 — Vector basics and magnitude:** Ran `vector_magnitude.py`; inputs `[3, 4]`, `[6, 8]`, and `[5, 12]` produced magnitudes `5.0`, `10.0`, and `13.0`. I corrected my first calculation for `[6, 8]`: its magnitude is 10, not 5.29.
+- **Segment 2 — Vector addition and subtraction:** Ran `vector_operations.py`; `[6, 5] + [2, 3]` produced `[8, 8]`, and subtraction produced `[4, 2]`.
+- **Segment 3 — Scalar multiplication:** Ran `vector_scalar_multiplication.py`; multiplying `[4, 5]` by 2, 3, and -1 produced `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
+- **Segment 4 — Dot product:** Ran `dot_product.py`; the examples produced 11 (positive), -13 (negative), and 0 (perpendicular).
+- **Segment 5 — Vector normalization:** Ran `vector_normalization.py`; `[6, 8]` became `[0.6, 0.8]`.
+- **Segment 6 — Cosine similarity:** Ran `cosine_similarity.py`; same-direction, perpendicular, and opposite-direction examples produced `1.0`, `0.0`, and `-1.0`.
+- **Segment 7 — Angles between vectors:** Ran `angle_between_vectors.py`; same direction produced `0.0 degrees`, perpendicular produced `90.0 degrees`, and opposite direction produced `180.0 degrees`.
+- **Segment 8 — Matrix transformations:** Ran `matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
+
+**What I understand so far:** The dot product gives one number and helps describe the relationship between vector directions. Cosine similarity normalizes that comparison by both vector magnitudes. The angle can then be calculated from the cosine value. A matrix-vector multiplication combines each matrix row with the vector to produce each component of the transformed vector.
+
+**Artifacts:** The eight practical files are in [the Lesson 1 code folder](phases/01-math-foundations/01-linear-algebra-intuition/code/). The longer explanations and formulas are in [Lesson 1 notes](phases/01-math-foundations/01-linear-algebra-intuition/notes.md).
+
+**Next:** Continue the remaining guided lesson material, then complete the official practical exercises and post-lesson quiz. Do not mark the lesson complete until those course checks are done.
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
