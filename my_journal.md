@@ -374,14 +374,14 @@ Overall, three practical exercises are complete, one is partially complete, and 
 
 **Examples and local execution evidence:**
 
-- **Segment 1 — Vector basics and magnitude:** Ran `vector_magnitude.py`; inputs `[3, 4]`, `[6, 8]`, and `[5, 12]` produced magnitudes `5.0`, `10.0`, and `13.0`. I corrected my first calculation for `[6, 8]`: its magnitude is 10, not 5.29.
-- **Segment 2 — Vector addition and subtraction:** Ran `vector_operations.py`; `[6, 5] + [2, 3]` produced `[8, 8]`, and subtraction produced `[4, 2]`.
-- **Segment 3 — Scalar multiplication:** Ran `vector_scalar_multiplication.py`; multiplying `[4, 5]` by 2, 3, and -1 produced `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
-- **Segment 4 — Dot product:** Ran `dot_product.py`; the examples produced 11 (positive), -13 (negative), and 0 (perpendicular).
-- **Segment 5 — Vector normalization:** Ran `vector_normalization.py`; `[6, 8]` became `[0.6, 0.8]`.
-- **Segment 6 — Cosine similarity:** Ran `cosine_similarity.py`; same-direction, perpendicular, and opposite-direction examples produced `1.0`, `0.0`, and `-1.0`.
-- **Segment 7 — Angles between vectors:** Ran `angle_between_vectors.py`; same direction produced `0.0 degrees`, perpendicular produced `90.0 degrees`, and opposite direction produced `180.0 degrees`.
-- **Segment 8 — Matrix transformations:** Ran `matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
+- **Segment 1 — Vector basics and magnitude:** Ran `1_vector_magnitude.py`; inputs `[3, 4]`, `[6, 8]`, and `[5, 12]` produced magnitudes `5.0`, `10.0`, and `13.0`. I corrected my first calculation for `[6, 8]`: its magnitude is 10, not 5.29.
+- **Segment 2 — Vector addition and subtraction:** Ran `2_vector_operations.py`; `[6, 5] + [2, 3]` produced `[8, 8]`, and subtraction produced `[4, 2]`.
+- **Segment 3 — Scalar multiplication:** Ran `3_vector_scalar_multiplication.py`; multiplying `[4, 5]` by 2, 3, and -1 produced `[8, 10]`, `[12, 15]`, and `[-4, -5]`.
+- **Segment 4 — Dot product:** Ran `4_dot_product.py`; the examples produced 11 (positive), -13 (negative), and 0 (perpendicular).
+- **Segment 5 — Vector normalization:** Ran `5_vector_normalization.py`; `[6, 8]` became `[0.6, 0.8]`.
+- **Segment 6 — Cosine similarity:** Ran `6_cosine_similarity.py`; same-direction, perpendicular, and opposite-direction examples produced `1.0`, `0.0`, and `-1.0`.
+- **Segment 7 — Angles between vectors:** Ran `7_angle_between_vectors.py`; same direction produced `0.0 degrees`, perpendicular produced `90.0 degrees`, and opposite direction produced `180.0 degrees`.
+- **Segment 8 — Matrix transformations:** Ran `8_matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
 
 **What I understand so far:** The dot product gives one number and helps describe the relationship between vector directions. Cosine similarity normalizes that comparison by both vector magnitudes. The angle can then be calculated from the cosine value. A matrix-vector multiplication combines each matrix row with the vector to produce each component of the transformed vector.
 
