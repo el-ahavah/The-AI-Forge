@@ -502,12 +502,12 @@ Local execution is pending. After pulling the latest changes, run:
 python3 phases/01-math-foundations/01-linear-algebra-intuition/code/angle_between_vectors.py
 ```
 
-Expected results are 0° for the same direction, 90° for perpendicular vectors, and 180° for opposite directions. These are expected values, not yet recorded as a local run.
+I ran the file locally. It printed `Same direction: 0.0 degrees`, `Perpendicular: 90.0 degrees`, and `Opposite direction: 180.0 degrees`. All three outputs matched the expected angles.
 
 ### 5. Segment 7 checkpoint
 
-- **Understanding check:** Correctly identified 0° for vectors pointing in the same direction. The opposite-direction check is part of the guided lesson.
-- **Python practical:** Created and committed; local run pending.
+- **Understanding check:** Correctly identified 0° for vectors pointing in the same direction; the opposite-direction check was used to reinforce the 180° case.
+- **Python practical:** Ran locally and produced 0°, 90°, and 180° for same, perpendicular, and opposite directions.
 
 ## Segment 8 — Matrix transformations and scaling
 
@@ -557,12 +557,12 @@ Local execution is pending. After pulling the latest changes, run:
 python3 phases/01-math-foundations/01-linear-algebra-intuition/code/matrix_vector_multiplication.py
 ```
 
-The expected transformed vector is `[2, 3]`. This is an expected result, not yet recorded as a local run.
+I ran the file locally. It printed the original vector `[1, 1]`, the scaling matrix `[[2, 0], [0, 3]]`, and the transformed vector `[2, 3]`. The output matched the expected matrix transformation.
 
 ### 5. Segment 8 checkpoint
 
 - **Matrix transformation:** The idea of applying a matrix to change a vector has been introduced.
-- **Python practical:** Created and committed; local run pending.
+- **Python practical:** Ran locally and transformed `[1, 1]` into `[2, 3]` using the scaling matrix.
 
 ## Updated lesson checkpoint
 
@@ -570,6 +570,6 @@ The expected transformed vector is `[2, 3]`. This is an expected result, not yet
 - **Segments 1–4:** Understanding checks completed; the four Python files for magnitude, vector operations, scalar multiplication, and dot product were run locally with expected outputs.
 - **Segment 5:** Normalization practical ran locally and produced `[0.6, 0.8]`.
 - **Segment 6:** Cosine similarity practical ran locally and produced `1.0`, `0.0`, and `-1.0`.
-- **Segment 7:** Angle-between-vectors practical created and committed; local run pending.
-- **Segment 8:** Matrix-vector multiplication/scaling practical created and committed; local run pending.
+- **Segment 7:** `angle_between_vectors.py` ran locally and returned 0.0°, 90.0°, and 180.0° for same, perpendicular, and opposite directions.
+- **Segment 8:** `matrix_vector_multiplication.py` ran locally and transformed `[1, 1]` into `[2, 3]`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
