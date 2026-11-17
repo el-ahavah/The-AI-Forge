@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–8 covered through guided explanations and checks. The practical files for Segments 1–6 have been run locally with expected outputs. Segment 7 (angles between vectors) and Segment 8 (matrix transformations) practical files have been created and committed; local execution is pending.
+**Status:** Segments 1–8 have been covered through guided explanations and checks. Segment 9 (linear independence) has now been prepared as a practical demonstration, but its guided lesson and local execution are still pending.
 
 ### 1. What is a vector?
 
@@ -573,3 +573,62 @@ I ran the file locally. It printed the original vector `[1, 1]`, the scaling mat
 - **Segment 7:** `7_angle_between_vectors.py` ran locally and returned 0.0°, 90.0°, and 180.0° for same, perpendicular, and opposite directions.
 - **Segment 8:** `8_matrix_vector_multiplication.py` ran locally and transformed `[1, 1]` into `[2, 3]`.
 - **Official lesson practical and post-lesson quiz:** Not yet completed.
+
+
+## Segment 9 — Linear independence
+
+**Status:** The practical file has been created and committed. The concept has not yet been taught in our guided lesson, and local execution is pending.
+
+### 1. What does linear independence mean?
+
+A set of vectors is **linearly independent** when none of its vectors can be made by combining the other vectors.
+
+A set is **linearly dependent** when at least one vector can be made by combining the others.
+
+### 2. Example of dependent vectors
+
+Consider these three vectors:
+
+```text
+v1 = [1, 0, 0]
+v2 = [0, 1, 0]
+v3 = [2, 1, 0]
+```
+
+The third vector can be made by doubling the first vector and adding the second:
+
+```text
+2 × v1 + v2
+= [2, 0, 0] + [0, 1, 0]
+= [2, 1, 0]
+= v3
+```
+
+Because one vector can be made from the other two, this set is **linearly dependent**.
+
+Notice that all three vectors have a third component of zero. They lie on the same flat plane (the xy-plane), so they do not provide three independent directions in 3D space.
+
+### 3. Python practical
+
+The demonstration is in [code/9_linear_independence.py](code/9_linear_independence.py).
+
+- `scale_vector()` multiplies every component by a number.
+- `add_vectors()` adds matching components from two vectors.
+- The main example calculates `2 * v1 + v2` and compares the result with `v3`.
+- If the two lists are equal, the example confirms that `v3` can be made from `v1` and `v2`.
+
+This file demonstrates one dependent set. It is not yet a general-purpose algorithm for testing every possible set of vectors.
+
+### 4. Local execution
+
+Local execution is pending. After pulling the latest changes, run:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/9_linear_independence.py
+```
+
+### 5. Segment 9 checkpoint
+
+- **Practical file:** Created and committed.
+- **Guided explanation and understanding check:** Pending.
+- **Local execution:** Pending.
