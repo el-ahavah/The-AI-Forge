@@ -389,6 +389,19 @@ Overall, three practical exercises are complete, one is partially complete, and 
 
 **Next:** Continue the remaining guided lesson material, then complete the official practical exercises and post-lesson quiz. Do not mark the lesson complete until those course checks are done.
 
+
+### Segment 9 — Linear independence (prepared)
+
+**Status:** A small Python demonstration has been added, but I have not yet studied this concept in the guided lesson or run the file locally.
+
+**Topic to learn:** A set of vectors is linearly dependent when at least one vector can be formed by combining the others. It is linearly independent when no vector in the set can be formed that way.
+
+**Example prepared:** `v1 = [1, 0, 0]`, `v2 = [0, 1, 0]`, and `v3 = [2, 1, 0]`. The relationship `v3 = 2 * v1 + v2` makes this set linearly dependent.
+
+**Artifact:** [`9_linear_independence.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/9_linear_independence.py).
+
+**Next:** Complete the guided explanation and understanding checks, then run the practical locally.
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
