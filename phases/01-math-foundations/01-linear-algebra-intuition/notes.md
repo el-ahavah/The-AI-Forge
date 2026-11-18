@@ -496,7 +496,7 @@ The practical is in [code/7_angle_between_vectors.py](code/7_angle_between_vecto
 
 ### 4. Local execution
 
-Local execution is pending. After pulling the latest changes, run:
+Local execution was completed successfully with:
 
 ```bash
 python3 phases/01-math-foundations/01-linear-algebra-intuition/code/7_angle_between_vectors.py
@@ -511,7 +511,7 @@ I ran the file locally. It printed `Same direction: 0.0 degrees`, `Perpendicular
 
 ## Segment 8 — Matrix transformations and scaling
 
-**Status:** The Python practical has been created and committed. Local execution is pending.
+**Status:** The matrix-vector multiplication concept and Python implementation have been covered step by step. The practical ran successfully in the local environment.
 
 ### 1. What is a matrix transformation?
 
