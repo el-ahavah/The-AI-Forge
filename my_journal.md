@@ -381,7 +381,7 @@ Overall, three practical exercises are complete, one is partially complete, and 
 - **Segment 5 — Vector normalization:** Ran `5_vector_normalization.py`; `[6, 8]` became `[0.6, 0.8]`.
 - **Segment 6 — Cosine similarity:** Ran `6_cosine_similarity.py`; same-direction, perpendicular, and opposite-direction examples produced `1.0`, `0.0`, and `-1.0`.
 - **Segment 7 — Angles between vectors:** Ran `7_angle_between_vectors.py`; same direction produced `0.0 degrees`, perpendicular produced `90.0 degrees`, and opposite direction produced `180.0 degrees`.
-- **Segment 8 — Matrix transformations:** Ran `8_matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
+- **Segment 8 — Matrix transformations:** Studied the matrix-vector multiplication implementation line by line, including function parameters, validation checks, row and column loops, resetting and accumulating `total`, appending each component, and returning the result. Ran `8_matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
 
 **What I understand so far:** The dot product gives one number and helps describe the relationship between vector directions. Cosine similarity normalizes that comparison by both vector magnitudes. The angle can then be calculated from the cosine value. A matrix-vector multiplication combines each matrix row with the vector to produce each component of the transformed vector.
 
