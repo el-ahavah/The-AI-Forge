@@ -366,11 +366,11 @@ Overall, three practical exercises are complete, one is partially complete, and 
 ## Phase 1 · Lesson 1: Linear Algebra Intuition
 
 **Started:** 2026-11-13  
-**Current progress:** Segments 1–8 covered through guided explanations and understanding checks.  
+**Current progress:** Segments 1–9 covered through guided explanations and understanding checks.  
 **Pre-lesson quiz:** 0/2 (baseline check, not the final lesson quiz).  
 **Official lesson practical and post-lesson quiz:** Pending.
 
-**Main idea in my own words:** A vector is a list of numbers that can represent a direction and a size. I learned how to measure its length (magnitude), add and subtract vectors, multiply a vector by a scalar, and calculate the dot product. I then learned normalization, which changes a vector's length to 1 without changing its direction, and cosine similarity, which compares the directions of two nonzero vectors. The angle between vectors tells me how their directions relate: 0° means the same direction, 90° means perpendicular, and 180° means opposite directions. A matrix can transform a vector; for example, a scaling matrix can change the x- and y-coordinates by different amounts.
+**Main idea in my own words:** A vector is a list of numbers that can represent a direction and a size. I learned how to measure its length (magnitude), add and subtract vectors, multiply a vector by a scalar, and calculate the dot product. I then learned normalization, which changes a vector's length to 1 without changing its direction, and cosine similarity, which compares the directions of two nonzero vectors. The angle between vectors tells me how their directions relate: 0° means the same direction, 90° means perpendicular, and 180° means opposite directions. A matrix can transform a vector; for example, a scaling matrix can change the x- and y-coordinates by different amounts. Linear independence tells me whether any vector in a set can be formed by combining the others; if one can, the set is linearly dependent.
 
 **Examples and local execution evidence:**
 
@@ -382,25 +382,32 @@ Overall, three practical exercises are complete, one is partially complete, and 
 - **Segment 6 — Cosine similarity:** Ran `6_cosine_similarity.py`; same-direction, perpendicular, and opposite-direction examples produced `1.0`, `0.0`, and `-1.0`.
 - **Segment 7 — Angles between vectors:** Ran `7_angle_between_vectors.py`; same direction produced `0.0 degrees`, perpendicular produced `90.0 degrees`, and opposite direction produced `180.0 degrees`.
 - **Segment 8 — Matrix transformations:** Studied the matrix-vector multiplication implementation line by line, including function parameters, validation checks, row and column loops, resetting and accumulating `total`, appending each component, and returning the result. Ran `8_matrix_vector_multiplication.py`; the scaling matrix `[[2, 0], [0, 3]]` transformed `[1, 1]` into `[2, 3]`.
+- **Segment 9 — Linear independence:** Learned that a set is linearly dependent when at least one vector can be made by combining the others, and independent when none can. Worked through `v3 = 2 * v1 + v2` using `v1 = [1, 0, 0]`, `v2 = [0, 1, 0]`, and `v3 = [2, 1, 0]`. Ran `9_linear_independence.py`; it printed the combined vector and `vector_3` as `[2, 1, 0]`, confirmed the set was linearly dependent, and showed that all three vectors lie in the xy-plane because their z-coordinate is zero.
 
-**What I understand so far:** The dot product gives one number and helps describe the relationship between vector directions. Cosine similarity normalizes that comparison by both vector magnitudes. The angle can then be calculated from the cosine value. A matrix-vector multiplication combines each matrix row with the vector to produce each component of the transformed vector.
+**What I understand so far:** The dot product gives one number and helps describe the relationship between vector directions. Cosine similarity normalizes that comparison by both vector magnitudes. The angle can then be calculated from the cosine value. A matrix-vector multiplication combines each matrix row with the vector to produce each component of the transformed vector. I can identify a dependent set by showing that one vector is a scalar combination of the others.
 
 **Artifacts:** The eight practical files are in [the Lesson 1 code folder](phases/01-math-foundations/01-linear-algebra-intuition/code/). The longer explanations and formulas are in [Lesson 1 notes](phases/01-math-foundations/01-linear-algebra-intuition/notes.md).
 
 **Next:** Continue the remaining guided lesson material, then complete the official practical exercises and post-lesson quiz. Do not mark the lesson complete until those course checks are done.
 
 
-### Segment 9 — Linear independence (prepared)
+### Segment 9 — Linear independence
 
-**Status:** A small Python demonstration has been added, but I have not yet studied this concept in the guided lesson or run the file locally.
+**Status:** Guided explanation and understanding checks completed. The Python practical ran successfully in the local environment.
 
-**Topic to learn:** A set of vectors is linearly dependent when at least one vector can be formed by combining the others. It is linearly independent when no vector in the set can be formed that way.
+**What I learned:** A set of vectors is linearly dependent when at least one vector can be formed by combining the others. It is linearly independent when none can be formed that way. For example, `v3 = 2 * v1 + v2` means `v3` does not add a new independent direction to the set.
 
-**Example prepared:** `v1 = [1, 0, 0]`, `v2 = [0, 1, 0]`, and `v3 = [2, 1, 0]`. The relationship `v3 = 2 * v1 + v2` makes this set linearly dependent.
+**Local execution evidence:** Ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/9_linear_independence.py
+```
+
+The output showed `2 * vector_1 + vector_2` and `vector_3` both equal `[2, 1, 0]`, and reported `The set is linearly dependent: True`. It also confirmed that all three vectors have a z-coordinate of zero and lie in the xy-plane.
 
 **Artifact:** [`9_linear_independence.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/9_linear_independence.py).
 
-**Next:** Complete the guided explanation and understanding checks, then run the practical locally.
+**Next:** Continue with the remaining official lesson material, practical exercises, and post-lesson quiz.
 
 ## Notes for future lessons
 
