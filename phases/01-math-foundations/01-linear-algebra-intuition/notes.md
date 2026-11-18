@@ -577,7 +577,7 @@ I ran the file locally. It printed the original vector `[1, 1]`, the scaling mat
 
 ## Segment 9 — Linear independence
 
-**Status:** The practical file has been created and committed. The concept has not yet been taught in our guided lesson, and local execution is pending.
+**Status:** Guided explanation and understanding checks completed. The practical ran successfully in the local environment.
 
 ### 1. What does linear independence mean?
 
@@ -621,14 +621,27 @@ This file demonstrates one dependent set. It is not yet a general-purpose algori
 
 ### 4. Local execution
 
-Local execution is pending. After pulling the latest changes, run:
+I ran:
 
 ```bash
 python3 phases/01-math-foundations/01-linear-algebra-intuition/code/9_linear_independence.py
 ```
 
+The program printed:
+
+```text
+2 * vector_1 + vector_2: [2, 1, 0]
+vector_3: [2, 1, 0]
+The set is linearly dependent: True
+All three vectors have a z-coordinate of 0.
+They lie in the xy-plane, not throughout 3D space.
+```
+
+The combined vector matched `vector_3`, confirming that the set is linearly dependent. The final two lines show that all three vectors lie in the xy-plane because their third components are zero.
+
 ### 5. Segment 9 checkpoint
 
-- **Practical file:** Created and committed.
-- **Guided explanation and understanding check:** Pending.
-- **Local execution:** Pending.
+- **Concept:** Explained linear independence and dependence; understanding checks completed successfully.
+- **Python practical:** Ran locally and confirmed `2 * vector_1 + vector_2` equals `vector_3`.
+- **Geometric observation:** All three vectors have a zero z-coordinate and lie in the xy-plane.
+
