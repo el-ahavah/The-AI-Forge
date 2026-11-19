@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–8 have been covered through guided explanations and checks. Segment 9 (linear independence) has now been prepared as a practical demonstration, but its guided lesson and local execution are still pending.
+**Status:** Segments 1–9 have been covered through guided explanations and checks, and their local practicals have run successfully. Official Practical 1 (angle between vectors) has also been completed and run locally; Official Practicals 2–6 and the post-lesson quiz remain pending.
 
 ### 1. What is a vector?
 
@@ -645,3 +645,28 @@ The combined vector matched `vector_3`, confirming that the set is linearly depe
 - **Python practical:** Ran locally and confirmed `2 * vector_1 + vector_2` equals `vector_3`.
 - **Geometric observation:** All three vectors have a zero z-coordinate and lie in the xy-plane.
 
+
+## Official Practical 1 — Angle between vectors
+
+**Status:** Completed, pulled from GitHub, and run successfully in the local environment.
+
+The official practical extends the `Vector` class with an `angle_between(other)` method. It reuses cosine similarity to obtain the cosine of the angle, clamps the value to the valid range from -1 to 1 to protect against floating-point rounding, then uses `math.acos()` and `math.degrees()` to return the angle in degrees.
+
+The implementation is in [code/10_official_practical_1_angle_between_vectors.py](code/10_official_practical_1_angle_between_vectors.py).
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/10_official_practical_1_angle_between_vectors.py
+```
+
+It printed:
+
+```text
+Perpendicular vectors: 90.0 degrees
+Same direction: 0.0 degrees
+```
+
+Both results matched the expected values. The implementation was committed to GitHub, pulled, and then verified by running it locally.
+
+**Next:** Official Practicals 2–6, followed by the official post-lesson quiz.
