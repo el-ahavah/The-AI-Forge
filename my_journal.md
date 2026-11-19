@@ -409,6 +409,32 @@ The output showed `2 * vector_1 + vector_2` and `vector_3` both equal `[2, 1, 0]
 
 **Next:** Continue with the remaining official lesson material, practical exercises, and post-lesson quiz.
 
+### Official Practical 1 — Angle between vectors
+
+**Date:** 2026-11-19  
+**Status:** Completed and run locally.
+
+**What I learned:** I implemented `angle_between(other)` by reusing cosine similarity, keeping its value between -1 and 1, converting the cosine to radians with `math.acos()`, and converting radians to degrees with `math.degrees()`.
+
+**Local execution evidence:** Ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/10_official_practical_1_angle_between_vectors.py
+```
+
+The program printed:
+
+```text
+Perpendicular vectors: 90.0 degrees
+Same direction: 0.0 degrees
+```
+
+Both results matched the expected values.
+
+**Artifact:** [`10_official_practical_1_angle_between_vectors.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/10_official_practical_1_angle_between_vectors.py).
+
+**Next:** Complete Official Practicals 2–6, then take the official post-lesson quiz.
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
