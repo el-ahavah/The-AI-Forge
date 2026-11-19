@@ -3,6 +3,8 @@
 Complete the angle_between method as part of the lesson exercise.
 """
 
+import math
+
 
 class Vector:
     def __init__(self, components):
@@ -27,8 +29,9 @@ class Vector:
 
     def angle_between(self, other):
         """Return the angle between this vector and another, in degrees."""
-        # TODO: Use cosine_similarity, math.acos, and math.degrees.
-        pass
+        cos_theta = self.cosine_similarity(other)
+        cos_theta = max(-1.0, min(1.0, cos_theta))
+        return math.degrees(math.acos(cos_theta))
 
 
 if __name__ == "__main__":
