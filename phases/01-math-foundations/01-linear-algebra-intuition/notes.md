@@ -718,7 +718,15 @@ The output matched the expected result. The file was committed to GitHub, pulled
 ### Official Practical 3 — Most similar word-like vectors
 
 **Date:** 2026-11-20  
-**Status:** Implementation created and committed; local execution and output verification are pending.
+**Status:** Completed, committed, pulled, and run locally on 2026-11-20.
+
+**Local execution evidence:** Ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/12_official_practical_3_most_similar_vectors.py
+```
+
+The program printed all 10 unique pair scores and identified `('Banana', 'Bus')` as the most similar pair, with cosine similarity `0.2963`. The output confirms that the program generated and compared the five vectors successfully.
 
 **Official task:** Generate five random word-like vectors, each with 50 dimensions, compare every unique pair using cosine similarity, and identify the pair with the highest score.
 
@@ -733,4 +741,4 @@ The output matched the expected result. The file was committed to GitHub, pulled
 
 **Artifact:** [`12_official_practical_3_most_similar_vectors.py`](code/12_official_practical_3_most_similar_vectors.py).
 
-**Next:** Pull the new file, run it locally, and share the output so the practical can be verified. Then complete Official Practicals 4–6 and the post-lesson quiz.
+**Next:** Complete Official Practicals 4–6 and the post-lesson quiz.
