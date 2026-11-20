@@ -501,10 +501,10 @@ Continue the course sequence from `LEARNING.md`; do not mark a phase complete un
 ### Official Practical 3 — Most similar word-like vectors
 
 **Date:** 2026-11-20  
-**Status:** Code created and committed; local execution is pending.
+**Status:** Completed, committed, pulled, and run locally on 2026-11-20.
 
 **What I learned:** Five word vectors with 50 dimensions each contain 250 numerical values altogether. I can store the vectors in a dictionary so each word is a key and its vector is the value. A list comprehension generates 50 random components for each word. With five vectors, there are 10 unique pairs to compare. Starting the inner loop at `i + 1` prevents self-comparisons and duplicate reversed pairs. The program keeps the highest cosine similarity and the pair of words that produced it, updating both only when a higher score is found.
 
 **Artifact:** [`12_official_practical_3_most_similar_vectors.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/12_official_practical_3_most_similar_vectors.py).
 
-**Next:** Pull and run the file locally, then record the actual output. Continue with Official Practicals 4–6 and the post-lesson quiz.
+**Next:** Continue with Official Practicals 4–6 and the post-lesson quiz.
