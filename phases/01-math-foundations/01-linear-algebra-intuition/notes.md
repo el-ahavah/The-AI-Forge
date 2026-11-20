@@ -2,7 +2,7 @@
 
 ## Segment 1 — Vector basics and magnitude
 
-**Status:** Segments 1–9 have been covered through guided explanations and checks, and their local practicals have run successfully. Official Practical 1 (angle between vectors) has also been completed and run locally; Official Practicals 2–6 and the post-lesson quiz remain pending.
+**Status:** Segments 1–9 have been covered through guided explanations and checks, and their local practicals have run successfully. Official Practical 1 (angle between vectors) has also been completed and run locally; Official Practical 1 (angle between vectors) and Official Practical 2 (2D scaling matrix) are complete and run locally; Official Practicals 3–6 and the post-lesson quiz remain pending.
 
 ### 1. What is a vector?
 
@@ -670,3 +670,46 @@ Same direction: 0.0 degrees
 Both results matched the expected values. The implementation was committed to GitHub, pulled, and then verified by running it locally.
 
 **Next:** Official Practicals 2–6, followed by the official post-lesson quiz.
+
+
+## Official Practical 2 — 2D scaling matrix
+
+**Status:** Completed, pulled from GitHub, and run successfully in the local environment.
+
+The task was to create a 2D scaling matrix that doubles the x-coordinate and triples the y-coordinate, then apply it to the vector `[1, 1]`.
+
+The scaling matrix is:
+
+```text
+[2  0]
+[0  3]
+```
+
+The zeros prevent the coordinates from affecting each other. The first row calculates the new x-coordinate, and the second row calculates the new y-coordinate:
+
+```text
+(2 × 1) + (0 × 1) = 2
+(0 × 1) + (3 × 1) = 3
+```
+
+The transformed vector is `[2, 3]`.
+
+The implementation is in [code/11_official_practical_2_scaling_matrix.py](code/11_official_practical_2_scaling_matrix.py). It uses a row-by-row matrix-vector multiplication function: for each row, it multiplies matching components, adds the products, and appends the resulting component.
+
+I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/11_official_practical_2_scaling_matrix.py
+```
+
+It printed:
+
+```text
+Scaling matrix: [[2, 0], [0, 3]]
+Original vector: [1, 1]
+Transformed vector: [2, 3]
+```
+
+The output matched the expected result. The file was committed to GitHub, pulled, and verified by running it locally.
+
+**Next:** Official Practicals 3–6, followed by the official post-lesson quiz.
