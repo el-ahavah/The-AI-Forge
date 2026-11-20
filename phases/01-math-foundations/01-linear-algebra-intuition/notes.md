@@ -713,3 +713,24 @@ Transformed vector: [2, 3]
 The output matched the expected result. The file was committed to GitHub, pulled, and verified by running it locally.
 
 **Next:** Official Practicals 3–6, followed by the official post-lesson quiz.
+
+
+### Official Practical 3 — Most similar word-like vectors
+
+**Date:** 2026-11-20  
+**Status:** Implementation created and committed; local execution and output verification are pending.
+
+**Official task:** Generate five random word-like vectors, each with 50 dimensions, compare every unique pair using cosine similarity, and identify the pair with the highest score.
+
+**What I learned while preparing the implementation:**
+
+- Five vectors contain 250 numerical components altogether (5 × 50), with 50 components in each vector.
+- A dictionary maps each word name to its vector, so I can identify the vectors by their keys.
+- A list comprehension such as `[random.uniform(-1, 1) for _ in range(50)]` generates 50 random numbers and collects them into a list.
+- Five different vectors produce 10 unique pairs. Starting the inner loop at `i + 1` avoids comparing a vector with itself and avoids checking each pair twice in reverse order.
+- The program keeps the best score in `highest_similarity` and the corresponding words in `most_similar_pair`. Both are updated only when a higher score is found.
+- `random.seed(42)` makes the generated vectors repeatable between runs.
+
+**Artifact:** [`12_official_practical_3_most_similar_vectors.py`](code/12_official_practical_3_most_similar_vectors.py).
+
+**Next:** Pull the new file, run it locally, and share the output so the practical can be verified. Then complete Official Practicals 4–6 and the post-lesson quiz.
