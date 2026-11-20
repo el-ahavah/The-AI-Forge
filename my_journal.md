@@ -435,6 +435,33 @@ Both results matched the expected values.
 
 **Next:** Complete Official Practicals 2–6, then take the official post-lesson quiz.
 
+### Official Practical 2 — 2D scaling matrix
+
+**Date:** 2026-11-20  
+**Status:** Completed and run locally.
+
+**What I learned:** A 2D scaling matrix can change each coordinate by a different factor. The matrix `[[2, 0], [0, 3]]` doubles x and triples y. The zeros prevent one coordinate from contributing to the other coordinate's new value. Applying it to `[1, 1]` gives `[2, 3]`.
+
+**Local execution evidence:** Ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/11_official_practical_2_scaling_matrix.py
+```
+
+The program printed:
+
+```text
+Scaling matrix: [[2, 0], [0, 3]]
+Original vector: [1, 1]
+Transformed vector: [2, 3]
+```
+
+The output matched the expected result.
+
+**Artifact:** [`11_official_practical_2_scaling_matrix.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/11_official_practical_2_scaling_matrix.py).
+
+**Next:** Complete Official Practicals 3–6, then take the official post-lesson quiz.
+
 ## Notes for future lessons
 
 For each lesson, append a section to `my_journal.md` using this copyable template. The headings give me a place to explain the idea, preserve a small example, and record what I want to review:
