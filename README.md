@@ -25,3 +25,8 @@ Current progress: Phase 0 Lessons 1–13 studied. Phase 1 Lesson 1 (Linear Algeb
 ## Learning principle
 
 Understand the concept, implement it, test it, and document the evidence.
+
+
+### Phase 1 · Linear Algebra Intuition update (2026-11-21)
+
+Official Practical 3 (most similar word-like vectors) was completed and run locally: five 50-dimensional random vectors were compared across 10 unique pairs, and Banana–Bus was the highest-scoring pair (cosine similarity 0.2963). Official Practical 4's starter file, `13_official_practical_4_gram_schmidt_verification.py`, has been created and verified on GitHub; it is intentionally unfinished and has not been studied or run yet. Practicals 4–6 and the post-lesson quiz remain pending.
