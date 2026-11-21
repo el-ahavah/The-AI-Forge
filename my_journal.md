@@ -508,3 +508,14 @@ Continue the course sequence from `LEARNING.md`; do not mark a phase complete un
 **Artifact:** [`12_official_practical_3_most_similar_vectors.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/12_official_practical_3_most_similar_vectors.py).
 
 **Next:** Continue with Official Practicals 4–6 and the post-lesson quiz.
+
+
+### Phase 1 · Lesson 1: Linear Algebra Intuition — Official Practical 4 starter
+
+**Date:** 2026-11-21  
+**Quiz:** Pending  
+**Review next time:** Gram-Schmidt and orthonormal verification
+
+**Main idea in my own words:** The next practical will check whether a set of vectors is orthonormal: different vectors must be perpendicular (dot product zero), and each vector must have magnitude one. I have not studied or implemented the exercise yet; the starter file is prepared for our later guided lesson.
+
+**Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/13_official_practical_4_gram_schmidt_verification.py).
