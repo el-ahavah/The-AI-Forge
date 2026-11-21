@@ -742,3 +742,15 @@ The program printed all 10 unique pair scores and identified `('Banana', 'Bus')`
 **Artifact:** [`12_official_practical_3_most_similar_vectors.py`](code/12_official_practical_3_most_similar_vectors.py).
 
 **Next:** Complete Official Practicals 4–6 and the post-lesson quiz.
+
+
+### Official Practical 4 — Gram-Schmidt orthonormality verification (starter prepared)
+
+**Date:** 2026-11-21  
+**Status:** Starter file created and verified on GitHub; lesson not started and execution pending.
+
+**Task:** Verify that Gram-Schmidt output is orthonormal by checking that distinct vectors have dot product zero and that every vector has magnitude one. We will study the checks and implement them together later.
+
+**Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](code/13_official_practical_4_gram_schmidt_verification.py).
+
+**Next:** Work through Official Practical 4 step by step when ready; Practicals 5–6 and the post-lesson quiz also remain pending.
