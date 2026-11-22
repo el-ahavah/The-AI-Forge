@@ -519,3 +519,14 @@ Continue the course sequence from `LEARNING.md`; do not mark a phase complete un
 **Main idea in my own words:** The next practical will check whether a set of vectors is orthonormal: different vectors must be perpendicular (dot product zero), and each vector must have magnitude one. I have not studied or implemented the exercise yet; the starter file is prepared for our later guided lesson.
 
 **Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/13_official_practical_4_gram_schmidt_verification.py).
+
+
+### Phase 1 · Lesson 1: Linear Algebra Intuition — Official Practical 5 starter
+
+**Date:** 2026-11-22  
+**Quiz:** Pending  
+**Review next time:** Matrix rank and geometric meaning
+
+**Main idea in my own words:** The upcoming practical asks me to make a 3×3 matrix with rank 2, verify that rank, and understand that its columns span a plane through the origin. I have only prepared the starter file; I have not learned or implemented this practical yet.
+
+**Artifact:** [`14_official_practical_5_matrix_rank.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/14_official_practical_5_matrix_rank.py).
