@@ -30,3 +30,8 @@ Understand the concept, implement it, test it, and document the evidence.
 ### Phase 1 · Linear Algebra Intuition update (2026-11-21)
 
 Official Practical 3 (most similar word-like vectors) was completed and run locally: five 50-dimensional random vectors were compared across 10 unique pairs, and Banana–Bus was the highest-scoring pair (cosine similarity 0.2963). Official Practical 4's starter file, `13_official_practical_4_gram_schmidt_verification.py`, has been created and verified on GitHub; it is intentionally unfinished and has not been studied or run yet. Practicals 4–6 and the post-lesson quiz remain pending.
+
+
+### Phase 1 · Linear Algebra Intuition update (2026-11-22)
+
+Prepared the starter for Official Practical 5, `14_official_practical_5_matrix_rank.py`. The exercise is to create a 3×3 matrix with rank 2, verify its rank, and explain geometrically that its columns span a plane through the origin. The starter is saved and verified on GitHub but has not yet been studied or run. Practicals 4–6 and the post-lesson quiz remain pending.
