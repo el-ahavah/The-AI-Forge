@@ -59,3 +59,5 @@ Become competent in AI engineering and build my personal model.
 <empty for now; no lesson currently requires a formal review based on the below-70% threshold>
 
 | 2026-11-21 | 01-math-foundations/01-linear-algebra-intuition | In progress | Prepared Official Practical 4 starter (Gram-Schmidt orthonormality verification); file created on GitHub, not yet studied or run. Practicals 4–6 and post-lesson quiz remain. |
+
+| 2026-11-22 | 01-math-foundations/01-linear-algebra-intuition | In progress | Prepared Official Practical 5 starter for a 3×3 rank-2 matrix and geometric interpretation; file verified on GitHub, not yet studied or run. Practicals 4–6 and post-lesson quiz remain. |
