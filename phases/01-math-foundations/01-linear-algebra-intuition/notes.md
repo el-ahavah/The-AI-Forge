@@ -754,3 +754,15 @@ The program printed all 10 unique pair scores and identified `('Banana', 'Bus')`
 **Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](code/13_official_practical_4_gram_schmidt_verification.py).
 
 **Next:** Work through Official Practical 4 step by step when ready; Practicals 5–6 and the post-lesson quiz also remain pending.
+
+
+### Official Practical 5 — Matrix rank (starter prepared)
+
+**Date:** 2026-11-22  
+**Status:** Starter file created and verified on GitHub; exercise not yet studied or run.
+
+**Task:** Create a 3×3 matrix of rank 2, verify its rank, and explain geometrically that its columns span a plane through the origin. We will work through this practical together later.
+
+**Artifact:** [`14_official_practical_5_matrix_rank.py`](code/14_official_practical_5_matrix_rank.py).
+
+**Next:** Practical 4 (Gram-Schmidt verification) and Practical 5 remain unstudied; Practical 6 and the post-lesson quiz are pending as well.
