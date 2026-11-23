@@ -744,17 +744,34 @@ The program printed all 10 unique pair scores and identified `('Banana', 'Bus')`
 **Next:** Complete Official Practicals 4–6 and the post-lesson quiz.
 
 
-### Official Practical 4 — Gram-Schmidt orthonormality verification (starter prepared)
+### Official Practical 4 — Gram-Schmidt orthonormality verification
 
-**Date:** 2026-11-21  
-**Status:** Starter file created and verified on GitHub; lesson not started and execution pending.
+**Date:** 2026-11-23  
+**Status:** Implementation pulled and run successfully in the local environment. The conceptual understanding check is still to be answered.
 
-**Task:** Verify that Gram-Schmidt output is orthonormal by checking that distinct vectors have dot product zero and that every vector has magnitude one. We will study the checks and implement them together later.
+**Official task:** Verify that the vectors produced by the Gram-Schmidt process are orthonormal. A set is orthonormal when every vector has magnitude one and every pair of distinct vectors is perpendicular.
+
+**What the output showed:** The input vectors were `[1, 0, 0]`, `[1, 1, 0]`, and `[1, 1, 1]`. Gram-Schmidt transformed them into:
+
+```text
+[1.0, 0.0, 0.0]
+[0.0, 1.0, 0.0]
+[0.0, 0.0, 1.0]
+```
+
+Each output vector had magnitude `1.000000`, so each is a unit vector. Every pairwise dot product was `0.000000`, so the vectors are perpendicular to one another. The final check printed `Are the vectors orthonormal? True`.
+
+**Local execution evidence:** I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/13_official_practical_4_gram_schmidt_verification.py
+```
+
+The program completed successfully and all three magnitude checks and all three pairwise perpendicularity checks returned `True`.
 
 **Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](code/13_official_practical_4_gram_schmidt_verification.py).
 
-**Next:** Work through Official Practical 4 step by step when ready; Practicals 5–6 and the post-lesson quiz also remain pending.
-
+**Next:** Answer the understanding check about the two conditions for orthonormality, then study Official Practical 5 (matrix rank). Practical 6 and the post-lesson quiz remain pending.
 
 ### Official Practical 5 — Matrix rank (starter prepared)
 
