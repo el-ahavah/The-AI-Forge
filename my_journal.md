@@ -539,12 +539,37 @@ The program completed successfully and all three magnitude checks and all three 
 
 **Next:** Answer the understanding check about the two conditions for orthonormality, then study Official Practical 5 (matrix rank). Practical 6 and the post-lesson quiz remain pending.
 
-### Phase 1 · Lesson 1: Linear Algebra Intuition — Official Practical 5 starter
+### Official Practical 5 — Matrix rank
 
-**Date:** 2026-11-22  
-**Quiz:** Pending  
-**Review next time:** Matrix rank and geometric meaning
+**Date:** 2026-11-23  
+**Status:** Implementation pulled and run successfully in the local environment. The conceptual understanding check is still open.
 
-**Main idea in my own words:** The upcoming practical asks me to make a 3×3 matrix with rank 2, verify that rank, and understand that its columns span a plane through the origin. I have only prepared the starter file; I have not learned or implemented this practical yet.
+**Official task:** Create a 3×3 matrix with rank 2, verify its rank, and explain geometrically what its columns span.
 
-**Artifact:** [`14_official_practical_5_matrix_rank.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/14_official_practical_5_matrix_rank.py).
+**Matrix used:**
+
+```text
+[1, 0, 1]
+[0, 1, 1]
+[1, 1, 2]
+```
+
+The third column is the sum of the first and second columns:
+
+```text
+[1, 1, 2] = [1, 0, 1] + [0, 1, 1]
+```
+
+Therefore, the third column does not add another independent direction. There are only two independent columns, so the matrix has rank 2. In three-dimensional space, those two independent directions span a plane through the origin.
+
+**Local execution evidence:** I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/14_official_practical_5_matrix_rank.py
+```
+
+The program printed `Matrix rank: 2`, `Expected rank: 2`, and `Rank verified: True`, followed by the geometric explanation that the columns span a plane through the origin in 3D space.
+
+**Artifact:** [`14_official_practical_5_matrix_rank.py`](code/14_official_practical_5_matrix_rank.py).
+
+**Next:** Explain in my own words why the matrix rank is 2 rather than 3. Then continue to Official Practical 6 (vector projection). The understanding check for Practical 4 and the official post-lesson quiz also remain open.
