@@ -63,3 +63,5 @@ Become competent in AI engineering and build my personal model.
 | 2026-11-22 | 01-math-foundations/01-linear-algebra-intuition | In progress | Prepared Official Practical 5 starter for a 3×3 rank-2 matrix and geometric interpretation; file verified on GitHub, not yet studied or run. Practicals 4–6 and post-lesson quiz remain. |
 
 | 2026-11-23 | 01-math-foundations/01-linear-algebra-intuition | In progress | Ran Official Practical 4 (Gram-Schmidt) locally. All three output vectors had magnitude 1, all three pairwise dot products were 0, and the program confirmed that the vectors are orthonormal. Practicals 5–6 and the post-lesson quiz remain; the understanding check is still open. |
+
+| 2026-11-23 | 01-math-foundations/01-linear-algebra-intuition | In progress | Ran Official Practical 5 (matrix rank) locally. The 3×3 matrix had rank 2; its third column was the sum of the first two, so the columns span a plane through the origin in 3D. Practical 6 and the post-lesson quiz remain; understanding checks for Practicals 4–5 are open. |
