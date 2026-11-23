@@ -510,16 +510,34 @@ Continue the course sequence from `LEARNING.md`; do not mark a phase complete un
 **Next:** Continue with Official Practicals 4–6 and the post-lesson quiz.
 
 
-### Phase 1 · Lesson 1: Linear Algebra Intuition — Official Practical 4 starter
+### Official Practical 4 — Gram-Schmidt orthonormality verification
 
-**Date:** 2026-11-21  
-**Quiz:** Pending  
-**Review next time:** Gram-Schmidt and orthonormal verification
+**Date:** 2026-11-23  
+**Status:** Implementation pulled and run successfully in the local environment. The conceptual understanding check is still to be answered.
 
-**Main idea in my own words:** The next practical will check whether a set of vectors is orthonormal: different vectors must be perpendicular (dot product zero), and each vector must have magnitude one. I have not studied or implemented the exercise yet; the starter file is prepared for our later guided lesson.
+**Official task:** Verify that the vectors produced by the Gram-Schmidt process are orthonormal. A set is orthonormal when every vector has magnitude one and every pair of distinct vectors is perpendicular.
 
-**Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](phases/01-math-foundations/01-linear-algebra-intuition/code/13_official_practical_4_gram_schmidt_verification.py).
+**What the output showed:** The input vectors were `[1, 0, 0]`, `[1, 1, 0]`, and `[1, 1, 1]`. Gram-Schmidt transformed them into:
 
+```text
+[1.0, 0.0, 0.0]
+[0.0, 1.0, 0.0]
+[0.0, 0.0, 1.0]
+```
+
+Each output vector had magnitude `1.000000`, so each is a unit vector. Every pairwise dot product was `0.000000`, so the vectors are perpendicular to one another. The final check printed `Are the vectors orthonormal? True`.
+
+**Local execution evidence:** I ran:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/13_official_practical_4_gram_schmidt_verification.py
+```
+
+The program completed successfully and all three magnitude checks and all three pairwise perpendicularity checks returned `True`.
+
+**Artifact:** [`13_official_practical_4_gram_schmidt_verification.py`](code/13_official_practical_4_gram_schmidt_verification.py).
+
+**Next:** Answer the understanding check about the two conditions for orthonormality, then study Official Practical 5 (matrix rank). Practical 6 and the post-lesson quiz remain pending.
 
 ### Phase 1 · Lesson 1: Linear Algebra Intuition — Official Practical 5 starter
 
