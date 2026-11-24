@@ -573,3 +573,17 @@ The program printed `Matrix rank: 2`, `Expected rank: 2`, and `Rank verified: Tr
 **Artifact:** [`14_official_practical_5_matrix_rank.py`](code/14_official_practical_5_matrix_rank.py).
 
 **Next:** Explain in my own words why the matrix rank is 2 rather than 3. Then continue to Official Practical 6 (vector projection). The understanding check for Practical 4 and the official post-lesson quiz also remain open.
+
+
+### Official Practical 6 — Vector projection (starter prepared)
+
+**Date:** 2026-11-24  
+**Status:** File created and committed to GitHub; the concept has not yet been studied and the file has not been run locally.
+
+**Official task:** Project the vector `[1, 2, 3]` onto `[1, 1, 1]` and explain what the projection represents geometrically. The implementation also calculates the remainder and checks that it is perpendicular to the direction vector.
+
+
+**Artifact:** [`15_official_practical_6_vector_projection.py`](code/15_official_practical_6_vector_projection.py).
+
+
+**Next:** Learn vector projection step by step, then run this practical. The post-lesson quiz and the understanding checks for Practicals 4–5 are also outstanding.
