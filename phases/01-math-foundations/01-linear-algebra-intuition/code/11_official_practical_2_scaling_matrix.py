@@ -6,20 +6,25 @@ The matrix doubles the x-coordinate and triples the y-coordinate.
 
 def matrix_vector_multiply(matrix, vector):
     """Multiply each matrix row by the vector to get the transformed vector."""
+    # Each matrix row calculates one coordinate in the new vector.
     result = []
 
     for row in matrix:
+        # Start a running sum for this row.
         total = 0
 
+        # Multiply matching entries and add them together.
         for matrix_value, vector_value in zip(row, vector):
             total += matrix_value * vector_value
 
+        # Store the row's final sum as one output coordinate.
         result.append(total)
 
     return result
 
 
 if __name__ == "__main__":
+    # Double x and triple y; zeros keep the coordinates separate.
     scaling_matrix = [
         [2, 0],
         [0, 3],
