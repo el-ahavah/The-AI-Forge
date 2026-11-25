@@ -12,10 +12,12 @@ TOLERANCE = 1e-10
 
 def matrix_rank(matrix, tolerance=TOLERANCE):
     """Return the number of linearly independent rows using elimination."""
+    # Work on a copy so the original matrix stays unchanged.
     rows = [row[:] for row in matrix]
     row_count = len(rows)
     column_count = len(rows[0])
 
+    # Each pivot identifies another independent row.
     pivot_row = 0
 
     for column in range(column_count):
@@ -33,7 +35,7 @@ def matrix_rank(matrix, tolerance=TOLERANCE):
         # Move the pivot row into the current pivot position.
         rows[pivot_row], rows[pivot] = rows[pivot], rows[pivot_row]
 
-        # Eliminate values below the pivot.
+        # Use row operations to make values below this pivot zero.
         pivot_value = rows[pivot_row][column]
 
         for current_row in range(pivot_row + 1, row_count):
@@ -49,6 +51,7 @@ def matrix_rank(matrix, tolerance=TOLERANCE):
         if pivot_row == row_count:
             break
 
+    # The number of pivots found is the rank.
     return pivot_row
 
 
