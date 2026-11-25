@@ -48,12 +48,14 @@ def normalize(vector):
 
 def gram_schmidt(vectors):
     """Convert independent input vectors into an orthonormal set."""
+    # Build the new orthonormal set one vector at a time.
     orthonormal_vectors = []
 
     for vector in vectors:
         # Make a copy so that the original input vector is not changed.
         remainder = vector[:]
 
+        # Remove any part pointing along directions already in the set.
         for previous_unit_vector in orthonormal_vectors:
             projection = project_onto(remainder, previous_unit_vector)
             remainder = subtract_vectors(remainder, projection)
@@ -61,6 +63,7 @@ def gram_schmidt(vectors):
         if magnitude(remainder) < TOLERANCE:
             raise ValueError("The input vectors are linearly dependent.")
 
+        # Normalize what remains so its length becomes exactly 1.
         orthonormal_vectors.append(normalize(remainder))
 
     return orthonormal_vectors
@@ -68,6 +71,7 @@ def gram_schmidt(vectors):
 
 def verify_orthonormal(vectors, tolerance=TOLERANCE):
     """Check unit magnitudes and zero pairwise dot products."""
+    # Both conditions must be true for the set to be orthonormal.
     all_unit_length = True
     all_perpendicular = True
 
@@ -80,6 +84,7 @@ def verify_orthonormal(vectors, tolerance=TOLERANCE):
         if not is_unit:
             all_unit_length = False
 
+    # Check each distinct pair once.
     for i in range(len(vectors)):
         for j in range(i + 1, len(vectors)):
             product = dot_product(vectors[i], vectors[j])
