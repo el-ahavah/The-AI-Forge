@@ -23,6 +23,7 @@ def cosine_similarity(vector_a, vector_b):
     if len(vector_a) != len(vector_b):
         raise ValueError("Vectors must have the same number of dimensions.")
 
+    # Cosine similarity compares direction, so use vector magnitudes to normalize.
     magnitude_a = magnitude(vector_a)
     magnitude_b = magnitude(vector_b)
 
@@ -48,7 +49,9 @@ if __name__ == "__main__":
     # Convert the dictionary entries to a list so we can access them by index.
     word_items = list(word_vectors.items())
 
+    # Cosine scores may be negative; begin lower than any possible score.
     highest_similarity = float("-inf")
+    # No best pair has been selected yet.
     most_similar_pair = None
 
     # Compare every unique pair once; j starts at i + 1 to skip self-pairs
@@ -61,6 +64,7 @@ if __name__ == "__main__":
             similarity = cosine_similarity(vector_a, vector_b)
             print(f"{name_a} - {name_b}: {similarity:.4f}")
 
+            # Replace the current best pair only when this score is higher.
             if similarity > highest_similarity:
                 highest_similarity = similarity
                 most_similar_pair = (name_a, name_b)
